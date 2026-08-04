@@ -1,0 +1,1223 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>:root{color-scheme:light dark}body{margin:0}img{max-width:100%}</style>
+</head>
+<body>
+<title>Washington, D.C. — August 5–8, 2026</title>
+<style>
+  :root{
+    --parch:#FFFFFF; --panel:#F6F8FB; --sink:#EAEFF6;
+    --ink:#0E1626; --soft:#44536B; --faint:#7C8AA0;
+    --rule:#D3DCE8; --hair:#E7ECF3;
+    --red:#B22234; --blue:#3C3B6E; --gold:#1E6FBA;
+    --river:#8FB2C9; --lawn:#A9BE9A;
+    --display:Baskerville,"Baskerville Old Face","Hoefler Text","Iowan Old Style",Palatino,Georgia,serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;
+    --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{--parch:#0A0F1A; --panel:#111827; --sink:#182234;
+    --ink:#EDF2F9; --soft:#9DAAC0; --faint:#6C7A92;
+    --rule:#26324A; --hair:#1B2436;
+    --red:#E4707E; --blue:#8E8CD8; --gold:#5FA8E8;
+    --river:#4E7488; --lawn:#5C6E52;}
+  }
+  :root[data-theme="dark"]{--parch:#0A0F1A; --panel:#111827; --sink:#182234;
+    --ink:#EDF2F9; --soft:#9DAAC0; --faint:#6C7A92;
+    --rule:#26324A; --hair:#1B2436;
+    --red:#E4707E; --blue:#8E8CD8; --gold:#5FA8E8;
+    --river:#4E7488; --lawn:#5C6E52;}
+  :root[data-theme="light"]{--parch:#FFFFFF; --panel:#F6F8FB; --sink:#EAEFF6;
+    --ink:#0E1626; --soft:#44536B; --faint:#7C8AA0;
+    --rule:#D3DCE8; --hair:#E7ECF3;
+    --red:#B22234; --blue:#3C3B6E; --gold:#1E6FBA;
+    --river:#8FB2C9; --lawn:#A9BE9A;}
+
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--parch);color:var(--ink);font-family:var(--sans);
+    font-size:16.5px;line-height:1.5;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:912px;margin:0 auto;padding:0 22px 110px}
+  a{color:inherit;text-decoration-color:var(--faint);text-underline-offset:3px}
+  a:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:2px}
+  h1,h2,h3,h4{font-family:var(--display);font-weight:600;margin:0;text-wrap:balance;letter-spacing:-.01em}
+  .ico{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.5;
+    stroke-linecap:round;stroke-linejoin:round;flex:none;vertical-align:-.12em}
+  .ico.fill{fill:currentColor;stroke:none}
+
+  .kicker{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint)}
+
+  /* ---- 13-star rule ---- */
+  .stars{display:block;width:100%;max-width:230px;height:13px;margin:0;color:var(--blue);opacity:.85}
+  .stars.wide{max-width:none;height:11px;opacity:.5}
+  .band{height:6px;display:flex;margin:22px 0 0;border-radius:100px;overflow:hidden}
+  .band i{flex:1}
+  .band i:nth-child(1){background:var(--red)}
+  .band i:nth-child(2){background:var(--panel);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+  .band i:nth-child(3){background:var(--blue)}
+
+  /* ---- masthead ---- */
+  .top{padding:46px 0 26px;text-align:center;border-bottom:3px double var(--rule)}
+  .seal{display:flex;justify-content:center;align-items:center;gap:14px;color:var(--red)}
+  .seal .yr{font-family:var(--mono);font-size:11px;letter-spacing:.32em;color:var(--faint)}
+  .top h1{font-size:clamp(46px,11vw,104px);line-height:.88;letter-spacing:-.03em;margin:16px 0 0}
+  .top .dc{display:block;color:var(--red)}
+  .rule250{font-family:var(--display);font-size:13px;letter-spacing:.42em;text-transform:uppercase;
+    color:var(--gold);margin-top:18px}
+  .sub{font-family:var(--mono);font-size:12px;color:var(--soft);margin-top:16px;
+    display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:center}
+  .sub b{color:var(--ink);font-weight:600}
+  .crew{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;justify-content:center}
+  .crew span{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+    padding:6px 13px;border-radius:100px;border:1px solid currentColor;display:flex;align-items:center;gap:6px}
+  .cm{color:var(--red)} .cv{color:var(--gold)} .cr{color:var(--blue)}
+
+  /* ---- day cards ---- */
+  .grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(196px,1fr));gap:12px;margin-top:30px}
+  .dcard{background:var(--panel);border:1px solid var(--rule);border-radius:2px;padding:17px 16px 18px;
+    display:block;text-decoration:none;border-top:3px solid;position:relative;text-align:left}
+  .dcard:hover{background:var(--sink)}
+  .dcard .dnum{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+    display:flex;align-items:center;gap:6px}
+  .dcard h3{font-size:20px;margin:8px 0 5px;line-height:1.12}
+  .dcard p{margin:0;font-size:13px;color:var(--soft);line-height:1.4}
+  .dcard .temp{font-family:var(--mono);font-size:11px;color:var(--faint);margin-top:11px;display:block;
+    font-variant-numeric:tabular-nums;border-top:1px solid var(--hair);padding-top:8px}
+  .c1,.c2{border-top-color:var(--red)} .c1 .dnum,.c2 .dnum{color:var(--red)}
+  .c3{border-top-color:var(--blue)} .c3 .dnum{color:var(--blue)}
+  .c4{border-top-color:var(--gold)} .c4 .dnum{color:var(--gold)}
+
+  .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(172px,1fr));gap:1px;background:var(--rule);
+    border:1px solid var(--rule);margin-top:14px;border-radius:2px;overflow:hidden}
+  .facts>div{background:var(--panel);padding:14px 15px}
+  .facts .k{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--faint);display:flex;align-items:center;gap:5px;margin-bottom:5px}
+  .facts .t{font-size:13.5px;line-height:1.35}
+  .win{color:var(--blue);font-weight:650} .lose{color:var(--red);font-weight:650}
+
+  /* ---- nav ---- */
+  nav{position:sticky;top:0;z-index:30;background:var(--parch);border-bottom:1px solid var(--rule);
+    margin:30px -22px 0;padding:0 22px;overflow-x:auto}
+  nav ul{display:flex;list-style:none;margin:0;padding:0;min-width:max-content}
+  nav a{display:flex;align-items:center;gap:6px;padding:12px 12px;font-family:var(--mono);font-size:10.5px;
+    letter-spacing:.12em;text-transform:uppercase;color:var(--faint);text-decoration:none;
+    border-bottom:2px solid transparent}
+  nav a:hover{color:var(--ink);border-bottom-color:var(--red)}
+
+  /* ---- sections ---- */
+  section{padding-top:58px}
+  .shead{display:flex;align-items:center;gap:12px;flex-wrap:wrap;border-bottom:3px double var(--rule);
+    padding-bottom:11px}
+  .shead h2{font-size:clamp(27px,5vw,40px);display:flex;align-items:center;gap:12px}
+  .shead .kicker{margin-left:auto}
+  .lede{color:var(--soft);font-size:15.5px;max-width:62ch;margin:16px 0 0}
+
+  /* ---- details ---- */
+  details{border-bottom:1px solid var(--hair)}
+  details>summary{list-style:none;cursor:pointer;padding:11px 0;display:flex;gap:11px;align-items:baseline;
+    font-size:14.5px;color:var(--soft)}
+  details>summary::-webkit-details-marker{display:none}
+  details>summary::before{content:"\002B";font-family:var(--mono);font-size:13px;color:var(--red);
+    flex:none;width:12px;font-weight:700}
+  details[open]>summary::before{content:"\2212"}
+  details>summary:hover{color:var(--ink)}
+  details>summary b{color:var(--ink);font-weight:600}
+  .dbody{padding:0 0 16px 23px;font-size:14.5px;color:var(--soft);max-width:66ch}
+  .dbody p{margin:0 0 9px} .dbody p:last-child{margin-bottom:0}
+  .dbody b{color:var(--ink)}
+  .dbody ul{margin:8px 0;padding-left:16px;list-style:none}
+  .dbody li{margin-bottom:6px;position:relative;padding-left:14px}
+  .dbody li::before{content:"\2605";position:absolute;left:-2px;color:var(--gold);font-size:9px;top:.35em}
+
+  /* ---- day ---- */
+  .day{padding-top:62px}
+  .dayhead{border-top:3px double var(--rule);padding-top:16px}
+  .day .kicker{display:flex;align-items:center;gap:7px}
+  .d1 .kicker,.d2 .kicker{color:var(--red)} .d3 .kicker{color:var(--blue)} .d4 .kicker{color:var(--gold)}
+  .day h2{font-size:clamp(30px,6.5vw,50px);margin-top:9px;line-height:.98}
+  .tagline{font-family:var(--display);font-style:italic;font-size:19px;color:var(--soft);margin-top:8px}
+
+  .slot{display:grid;grid-template-columns:90px 1fr;gap:0 20px;padding:19px 0;border-top:1px solid var(--hair)}
+  .slot:first-of-type{border-top:1px solid var(--rule)}
+  .clock{font-family:var(--mono);font-size:19px;font-variant-numeric:tabular-nums;letter-spacing:-.05em;
+    color:var(--ink);line-height:1.1;padding-top:2px}
+  .clock small{display:block;font-size:10.5px;color:var(--faint);letter-spacing:0;margin-top:4px}
+  .slot h3{font-size:21px;line-height:1.18;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+  .slot h3 .ico{color:var(--red)}
+  .d3 .slot h3 .ico{color:var(--blue)} .d4 .slot h3 .ico{color:var(--gold)}
+  .hook{margin:7px 0 0;font-size:15px;color:var(--soft);max-width:64ch}
+  .pins{display:flex;flex-wrap:wrap;gap:6px;margin-top:11px}
+  .pin{font-family:var(--mono);font-size:9.5px;letter-spacing:.11em;text-transform:uppercase;padding:4px 9px;
+    border-radius:100px;border:1px solid var(--rule);color:var(--faint)}
+  .pin.go{border-color:var(--blue);color:var(--blue)}
+  .pin.hot,.pin.m{border-color:var(--red);color:var(--red)}
+  .pin.v{border-color:var(--gold);color:var(--gold)}
+  .pin.r{border-color:var(--blue);color:var(--blue)}
+  .pin.lock{background:var(--red);border-color:var(--red);color:var(--parch)}
+  .slot details{border-bottom:none;margin-top:9px}
+  .slot details>summary{padding:6px 0;font-size:13.5px}
+
+  .hop{display:grid;grid-template-columns:90px 1fr;gap:0 20px;padding:8px 0;border-top:1px solid var(--hair)}
+  .hop .clock{font-size:11.5px;color:var(--faint);padding-top:2px}
+  .hop .mv{font-family:var(--mono);font-size:11.5px;color:var(--faint);padding-top:2px;
+    display:flex;align-items:center;gap:7px}
+  .rest{background:var(--panel)} .rest h3,.rest .hook{color:var(--blue)}
+
+  /* ---- choice ---- */
+  .choice{display:grid;grid-template-columns:repeat(auto-fit,minmax(234px,1fr));gap:10px;margin-top:13px}
+  .ch{border:1px solid var(--rule);border-radius:2px;padding:14px 15px;background:var(--panel)}
+  .ch.main{border-top:3px solid var(--blue)}
+  .ch.alt{border-top:3px solid var(--rule);background:var(--sink)}
+  .ch .lbl{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--faint);display:block;margin-bottom:6px}
+  .ch.main .lbl{color:var(--blue)}
+  .ch h4{font-size:16.5px;margin-bottom:4px}
+  .ch p{margin:5px 0 0;font-size:13px;color:var(--soft);line-height:1.45}
+  .ch .cost{font-family:var(--mono);font-size:11px;color:var(--ink);margin-top:10px}
+
+  .meet{border:1px solid var(--gold);border-radius:2px;padding:13px 15px;margin-top:10px;background:var(--panel)}
+  .meet .lbl{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--gold);display:flex;align-items:center;gap:6px;margin-bottom:5px}
+  .meet p{margin:0;font-size:13.5px;color:var(--soft)}
+
+  /* ---- dinner ---- */
+  .eat{margin-top:26px;border:1px solid var(--rule);border-radius:2px;background:var(--panel);
+    padding:19px 21px;border-left:3px solid var(--gold)}
+  .eat .lbl{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--gold);display:flex;align-items:center;gap:6px;margin-bottom:6px}
+  .eat h3{font-size:23px}
+  .eat p{margin:8px 0 0;font-size:14.5px;color:var(--soft);max-width:62ch}
+
+  /* ---- tables ---- */
+  .scroll{overflow-x:auto;margin-top:20px;border-top:2px solid var(--ink)}
+  table{border-collapse:collapse;width:100%;min-width:560px}
+  th,td{text-align:left;padding:11px 12px 11px 0;vertical-align:top;border-bottom:1px solid var(--hair)}
+  th{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);font-weight:500}
+  td.n{font-family:var(--mono);color:var(--gold);width:30px;padding-right:0;font-weight:600}
+  td.b{font-weight:600}
+  td.c{font-family:var(--mono);font-size:12.5px;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .free{color:var(--blue)} .paid{color:var(--red)}
+  .go{display:inline-flex;align-items:center;gap:5px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;
+    text-transform:uppercase;padding:6px 11px;border:1px solid var(--blue);color:var(--blue);
+    text-decoration:none;white-space:nowrap;border-radius:100px}
+  .go:hover{background:var(--blue);color:var(--parch)}
+
+  /* ---- hearings ---- */
+  .hear{border:1px solid var(--rule);border-radius:2px;background:var(--panel);margin-top:10px;
+    display:grid;grid-template-columns:108px 1fr;gap:0 16px;padding:15px 16px}
+  .hear.star{border-left:3px solid var(--red);background:var(--sink)}
+  .hear .when{font-family:var(--mono);font-size:15px;font-variant-numeric:tabular-nums;
+    letter-spacing:-.04em;color:var(--ink);line-height:1.15}
+  .hear .room{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.1em;
+    color:var(--red);margin-top:6px;font-weight:600}
+  .hear .bldg{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.08em;
+    color:var(--faint);margin-top:3px;text-transform:uppercase}
+  .hear h4{font-size:15.5px;line-height:1.25}
+  .hear p{margin:5px 0 0;font-size:13.5px;color:var(--soft)}
+  .hear .type{font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--faint);margin-bottom:4px;display:block}
+  .hear .type.mk{color:var(--red)}
+  @media(max-width:560px){.hear{grid-template-columns:1fr;gap:7px}}
+
+  /* ---- weather ---- */
+  .wx{display:grid;grid-template-columns:repeat(auto-fit,minmax(152px,1fr));gap:1px;background:var(--rule);
+    border:1px solid var(--rule);border-radius:2px;overflow:hidden;margin-top:20px}
+  .wx>div{background:var(--panel);padding:16px 15px}
+  .wx .wd{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+  .wx .deg{font-family:var(--display);font-size:38px;line-height:1;margin:7px 0 4px;font-variant-numeric:tabular-nums}
+  .wx .sky{font-size:12.5px;color:var(--soft)}
+  .wx .hit{font-size:12.5px;color:var(--ink);margin-top:9px;border-top:1px solid var(--hair);padding-top:9px}
+  .cool{color:var(--blue)} .warm{color:var(--gold)} .scorch{color:var(--red)}
+
+  /* ---- callouts ---- */
+  .flag{border-left:3px solid var(--red);padding:4px 0 4px 17px;margin-top:22px}
+  .flag .kicker{color:var(--red);display:flex;align-items:center;gap:6px;margin-bottom:6px}
+  .flag p{margin:0 0 9px;font-size:15px;max-width:64ch} .flag p:last-child{margin-bottom:0}
+  .flag.good{border-left-color:var(--blue)} .flag.good .kicker{color:var(--blue)}
+
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(252px,1fr));gap:1px;background:var(--rule);
+    border:1px solid var(--rule);margin-top:22px;border-radius:2px;overflow:hidden}
+  .cards>article{background:var(--panel);padding:18px 18px 20px}
+  .cards h3{font-size:17.5px;margin-bottom:4px;display:flex;align-items:center;gap:8px}
+  .cards p{font-size:13.5px;color:var(--soft);margin:7px 0 0}
+  .cards .cost{font-family:var(--mono);font-size:11px;color:var(--ink);margin-top:10px}
+  .cards .go{margin-top:12px}
+
+  .mz{font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase}
+  .legend{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:11px}
+  .legend span{font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;
+    display:flex;align-items:center;gap:6px;color:var(--faint)}
+  .legend i{width:8px;height:8px;border-radius:50%;display:inline-block}
+  .addr{color:var(--blue);text-decoration:underline;text-decoration-color:var(--rule);
+    text-underline-offset:2px;white-space:nowrap}
+  .addr:hover{text-decoration-color:var(--blue)}
+  .pn text{font-family:var(--mono);font-size:9.5px;font-weight:700;text-anchor:middle}
+  .mkey{display:grid;grid-template-columns:repeat(auto-fit,minmax(178px,1fr));gap:14px 22px;margin-top:16px}
+  .mkey .kd{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;
+    display:block;margin-bottom:6px;font-weight:600}
+  .mkey ol{margin:0;padding-left:19px;font-size:12.5px;color:var(--soft);line-height:1.65}
+  .mkey li{padding-left:2px}
+  .mkey li::marker{font-family:var(--mono);font-size:10.5px;color:var(--faint)}
+  .mapl{display:inline-flex;align-items:center;gap:5px;font-family:var(--mono);font-size:9.5px;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--blue);text-decoration:none;
+    border:1px solid var(--rule);border-radius:100px;padding:3px 9px;margin-top:9px;white-space:nowrap}
+  .mapl:hover{border-color:var(--blue);background:var(--blue);color:var(--parch)}
+  .routebox{border:1px solid var(--rule);border-radius:2px;background:var(--panel);padding:17px 18px;margin-top:22px}
+  .routebox h4{font-size:17px;margin-bottom:3px}
+  .routebox p{margin:6px 0 0;font-size:13.5px;color:var(--soft)}
+  .routebox .go{margin-top:12px}
+  .stops{font-family:var(--mono);font-size:11.5px;color:var(--ink);margin-top:10px;line-height:1.9}
+  .stops span{color:var(--faint)}
+  figure{margin:26px 0 0}
+  .map{border:1px solid var(--rule);border-radius:2px;background:var(--panel);padding:11px 9px 5px;overflow-x:auto}
+  .map svg{display:block;width:100%;height:auto;min-width:440px}
+  figcaption{font-family:var(--mono);font-size:10px;letter-spacing:.08em;color:var(--faint);
+    margin-top:10px;text-transform:uppercase}
+  .ml{font-family:var(--mono);font-size:11px;letter-spacing:.04em;fill:var(--ink)}
+  .ms{font-family:var(--mono);font-size:9px;letter-spacing:.06em;fill:var(--faint)}
+  .mw{font-family:var(--display);font-style:italic;font-size:11px;fill:var(--river)}
+
+  footer{margin-top:70px;border-top:3px double var(--rule);padding-top:20px;font-size:12px;
+    color:var(--faint);text-align:center}
+  footer .stars{margin:0 auto 16px}
+
+  @media (max-width:580px){
+    .slot,.hop{grid-template-columns:1fr;gap:4px}
+    .clock{font-size:16px} .clock small{display:inline;margin-left:8px}
+    .wrap{padding:0 16px 80px} nav{margin:26px -16px 0;padding:0 16px}
+    .shead .kicker{margin-left:0;width:100%}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+  html{scroll-behavior:smooth}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.6l2.7 6.3 6.8.6-5.1 4.5 1.5 6.6L12 17l-5.9 3.6 1.5-6.6L2.5 9.5l6.8-.6z"/></symbol>
+    <symbol id="i-quill" viewBox="0 0 24 24"><path d="M3 21c4-9 9-14 18-18-1 9-6 15-13 16"/><path d="M6.5 17.5c2-1 4.5-3 6-5.5"/></symbol>
+    <symbol id="i-dome" viewBox="0 0 24 24"><path d="M12 2v3"/><path d="M6.5 11a5.5 5.5 0 0111 0"/><path d="M4 11h16"/><path d="M5 21V11m4 10V11m6 10V11m4 10V11"/><path d="M2.5 21h19"/></symbol>
+    <symbol id="i-column" viewBox="0 0 24 24"><path d="M2.5 7L12 2.5 21.5 7"/><path d="M4 7h16"/><path d="M6 19V7m4 12V7m4 12V7m4 12V7"/><path d="M2.5 19h19v2.5h-19z"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M3 4.5h6a3 3 0 013 3v12a2.5 2.5 0 00-2.5-2.5H3z"/><path d="M21 4.5h-6a3 3 0 00-3 3v12a2.5 2.5 0 012.5-2.5H21z"/></symbol>
+    <symbol id="i-rocket" viewBox="0 0 24 24"><path d="M12 2c3.5 3 5.5 7 5.5 11l-2.5 4h-6L6.5 13C6.5 9 8.5 5 12 2z"/><circle cx="12" cy="10" r="2"/><path d="M9 19l-2 3m8-3l2 3"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.8-6 10-6 10 6 10 6-3.8 6-10 6-10-6-10-6z"/><circle cx="12" cy="12" r="2.6"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></symbol>
+    <symbol id="i-train" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="13" rx="3"/><path d="M5 10h14"/><circle cx="9" cy="13" r="1"/><circle cx="15" cy="13" r="1"/><path d="M8 16l-2.5 5M16 16l2.5 5"/></symbol>
+    <symbol id="i-fork" viewBox="0 0 24 24"><path d="M6 2v7a2.5 2.5 0 005 0V2M8.5 11.5V22"/><path d="M17 2c-1.7 1.5-2.5 4-2.5 6.5S15.3 13 17 13.5V22"/></symbol>
+    <symbol id="i-cap" viewBox="0 0 24 24"><path d="M2.5 8.5L12 4.5l9.5 4L12 12.5z"/><path d="M6.5 10.5V16c0 1.5 2.5 3 5.5 3s5.5-1.5 5.5-3v-5.5"/><path d="M21.5 8.5v6"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 019.5 4 8.5 8.5 0 1020 14.5z"/></symbol>
+    <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5 22V3"/><path d="M5 4h13l-2.5 4.5L18 13H5z"/></symbol>
+    <symbol id="i-gavel" viewBox="0 0 24 24"><path d="M13.5 3.5l7 7-3 3-7-7z"/><path d="M9.5 7.5l-6 6 3 3 6-6"/><path d="M3 21h9"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M12 6.5V12l3.5 2"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M4 8h16l-1.2 12.5a1.5 1.5 0 01-1.5 1.5H6.7a1.5 1.5 0 01-1.5-1.5z"/><path d="M8.5 8V5.5a3.5 3.5 0 017 0V8"/></symbol>
+    <symbol id="i-ticket" viewBox="0 0 24 24"><path d="M3 8.5a2.5 2.5 0 000 7V19h18v-3.5a2.5 2.5 0 010-7V5H3z"/><path d="M14 5v14"/></symbol>
+  </defs>
+</svg>
+
+<div class="wrap">
+
+<header class="top">
+  <div class="seal">
+    <svg class="ico fill" style="width:26px;height:26px" aria-hidden="true"><use href="#i-star"/></svg>
+    <span class="yr">1776 &mdash; 2026</span>
+    <svg class="ico fill" style="width:26px;height:26px" aria-hidden="true"><use href="#i-star"/></svg>
+  </div>
+  <h1>Washington<span class="dc">D.C.</span></h1>
+  <p class="rule250">Semiquincentennial Summer</p>
+  <svg class="stars" viewBox="0 0 260 13" style="margin:20px auto 0" aria-hidden="true">
+    <g fill="currentColor"><use href="#i-star" x="0" y="0" width="13" height="13"/>
+    <use href="#i-star" x="20.6" width="13" height="13"/><use href="#i-star" x="41.2" width="13" height="13"/>
+    <use href="#i-star" x="61.8" width="13" height="13"/><use href="#i-star" x="82.4" width="13" height="13"/>
+    <use href="#i-star" x="103" width="13" height="13"/><use href="#i-star" x="123.6" width="13" height="13"/>
+    <use href="#i-star" x="144.2" width="13" height="13"/><use href="#i-star" x="164.8" width="13" height="13"/>
+    <use href="#i-star" x="185.4" width="13" height="13"/><use href="#i-star" x="206" width="13" height="13"/>
+    <use href="#i-star" x="226.6" width="13" height="13"/><use href="#i-star" x="247" width="13" height="13"/></g>
+  </svg>
+  <div class="sub">
+    <span><b>Wed 5</b> to <b>Sat 8 August 2026</b></span>
+    <span>84 to 97 F</span><span>Sunset 8:12 pm</span><span>Uber + Metro</span>
+  </div>
+  <div class="crew">
+    <span class="cm"><svg class="ico" aria-hidden="true"><use href="#i-dome"/></svg>Mary &middot; government</span>
+    <span class="cv"><svg class="ico" aria-hidden="true"><use href="#i-quill"/></svg>Violet &middot; history + photos</span>
+    <span class="cr"><svg class="ico" aria-hidden="true"><use href="#i-rocket"/></svg>Ryan &middot; space</span>
+  </div>
+  <div class="band"><i></i><i></i><i></i></div>
+</header>
+
+<div class="grid4">
+  <a class="dcard c1" href="#d1"><span class="dnum"><svg class="ico" aria-hidden="true"><use href="#i-quill"/></svg>Wed &middot; Day 1</span>
+    <h3>Founding Documents</h3><p>A live AI markup, the Declaration, Georgetown at golden hour.</p>
+    <span class="temp">84&deg; &middot; storms</span></a>
+  <a class="dcard c2" href="#d2"><span class="dnum"><svg class="ico" aria-hidden="true"><use href="#i-dome"/></svg>Thu &middot; Day 2</span>
+    <h3>The Machine Running</h3><p>Staff-led Capitol tour. A live floor. A shutdown bill.</p>
+    <span class="temp">90&deg; &middot; indoors all day</span></a>
+  <a class="dcard c3" href="#d3"><span class="dnum"><svg class="ico" aria-hidden="true"><use href="#i-rocket"/></svg>Fri &middot; Day 3</span>
+    <h3>Flight, then Marble</h3><p>Apollo 11 by day. Lincoln lit up at night.</p>
+    <span class="temp">90&ndash;97&deg; &middot; the hard one</span></a>
+  <a class="dcard c4" href="#d4"><span class="dnum"><svg class="ico" aria-hidden="true"><use href="#i-cap"/></svg>Sat &middot; Day 4</span>
+    <h3>Her Future, Then Spies</h3><p>A campus at nine. A cover identity at half one.</p>
+    <span class="temp">Hot &middot; clear</span></a>
+</div>
+
+<div class="facts">
+  <div><span class="k"><svg class="ico" aria-hidden="true"><use href="#i-ticket"/></svg>Locked in</span>
+    <span class="t"><b class="win">Gallery passes</b> from Sen. Murray &mdash; good all Congress. <b class="win">Capitol tour 10:00</b> via Sen. Cantwell.</span></div>
+  <div><span class="k"><svg class="ico" aria-hidden="true"><use href="#i-gavel"/></svg>On the floor</span>
+    <span class="t">A <b>continuing resolution</b> to avert a shutdown. Cloture cleared <b>89&ndash;4</b> Monday.</span></div>
+  <div><span class="k"><svg class="ico" aria-hidden="true"><use href="#i-flag"/></svg>House</span>
+    <span class="t"><b class="lose">Gone.</b> Recess since late July. Next votes Aug 31.</span></div>
+  <div><span class="k"><svg class="ico" aria-hidden="true"><use href="#i-bag"/></svg>Cut</span>
+    <span class="t"><b class="lose">Pentagon</b> &middot; Mount Vernon &middot; White House</span></div>
+</div>
+
+<nav aria-label="Sections">
+  <ul>
+    <li><a href="#book"><svg class="ico" aria-hidden="true"><use href="#i-ticket"/></svg>Book</a></li>
+    <li><a href="#hearings"><svg class="ico" aria-hidden="true"><use href="#i-gavel"/></svg>Hearings</a></li>
+    <li><a href="#wx"><svg class="ico" aria-hidden="true"><use href="#i-sun"/></svg>Heat</a></li>
+    <li><a href="#move"><svg class="ico" aria-hidden="true"><use href="#i-train"/></svg>Getting around</a></li>
+    <li><a href="#d1">Wed</a></li><li><a href="#d2">Thu</a></li>
+    <li><a href="#d3">Fri</a></li><li><a href="#d4">Sat</a></li>
+    <li><a href="#floor"><svg class="ico" aria-hidden="true"><use href="#i-dome"/></svg>Floor briefing</a></li>
+    <li><a href="#violet"><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg>For Violet</a></li>
+    <li><a href="#fine">Fine print</a></li>
+  </ul>
+</nav>
+
+<section id="citymapwrap" style="padding-top:44px">
+  <figure id="citymap">
+    <div class="map">
+      <svg viewBox="35 25 700 445" role="img" aria-label="Map of central Washington DC plotted to scale, with numbered stops keyed to the list below.">
+        <defs>
+          <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+            <path d="M0 1 L9 5 L0 9 z" fill="var(--faint)"/>
+          </marker>
+        </defs>
+
+        <!-- water -->
+        <path d="M 62 30 L 96 30 C 122 120, 158 190, 200 248 C 236 297, 276 348, 318 404
+                 L 352 470 L 300 470 C 262 402, 220 340, 180 288 C 138 232, 96 130, 62 30 Z"
+              fill="var(--river)" opacity=".26"/>
+        <path d="M 444 392 L 470 376 L 556 468 L 520 470 Z" fill="var(--river)" opacity=".22"/>
+        <ellipse cx="358" cy="366" rx="41" ry="27" fill="var(--river)" opacity=".26"/>
+        <text class="mw" x="150" y="215" transform="rotate(57 150 215)">Potomac River</text>
+        <text class="mw" x="332" y="369" font-size="8">Tidal Basin</text>
+
+        <!-- street armature -->
+        <g stroke="var(--rule)" stroke-width=".9" opacity=".75" fill="none">
+          <path d="M 250 259 L 660 259"/><path d="M 250 318 L 660 318"/>
+          <path d="M 392 60 L 392 400"/><path d="M 638 200 L 638 400"/>
+          <path d="M 120 145 L 660 145"/>
+          <path d="M 396 202 L 634 286" stroke-dasharray="0"/>
+          <path d="M 331 64 L 656 198"/>
+        </g>
+        <text class="ms" x="256" y="255">CONSTITUTION AVE</text>
+        <text class="ms" x="256" y="330">INDEPENDENCE AVE</text>
+        <text class="ms" x="126" y="141">K ST</text>
+        <text class="ms" x="470" y="238" transform="rotate(19 470 238)">PENNSYLVANIA AVE</text>
+        <text class="ms" x="430" y="118" transform="rotate(22 430 118)">MASSACHUSETTS AVE</text>
+
+        <!-- the Mall -->
+        <rect x="272" y="284" width="330" height="24" fill="var(--lawn)" opacity=".32"/>
+        <rect x="278" y="292" width="108" height="6" fill="var(--river)" opacity=".5"/>
+        <text class="ms" x="418" y="300" letter-spacing="2">THE NATIONAL MALL</text>
+
+        <!-- Capitol Hill plate -->
+        <rect x="632" y="238" width="74" height="82" rx="3" fill="var(--red)" opacity=".08"/>
+        <text class="mz" x="628" y="232" fill="var(--red)">Capitol Hill</text>
+        <circle cx="638" cy="290" r="8" fill="none" stroke="var(--red)" stroke-width="1.4" opacity=".8"/>
+        <text class="ms" x="612" y="336" fill="var(--red)">U.S. CAPITOL</text>
+
+        <!-- night walk route -->
+        <path d="M 330 365 L 322 334 L 268 297" stroke="var(--blue)" stroke-width="2"
+              stroke-dasharray="5 4" fill="none" opacity=".85" marker-end="url(#ar)"/>
+
+        <!-- context, unlabelled but present -->
+        <g fill="var(--faint)" opacity=".55">
+          <circle cx="392" cy="200" r="3.2"/><circle cx="402" cy="295" r="3.2"/>
+          <circle cx="513" cy="200" r="3.2"/><circle cx="392" cy="389" r="3.2"/>
+          <circle cx="661" cy="200" r="3.2"/>
+        </g>
+        <text class="ms" x="336" y="196">WHITE HOUSE</text>
+        <text class="ms" x="380" y="279">MONUMENT</text>
+        <text class="ms" x="522" y="197">PORTRAIT GALL.</text>
+        <text class="ms" x="402" y="392">JEFFERSON</text>
+        <text class="ms" x="612" y="196">UNION STN</text>
+
+        <!-- numbered stops -->
+        <g class="pinset">
+          <g fill="var(--red)"><circle cx="657" cy="325" r="10"/><circle cx="648" cy="260" r="10"/><circle cx="514" cy="256" r="10"/><circle cx="455" cy="153" r="10"/><circle cx="155" cy="127" r="10"/></g>
+          <g fill="var(--red)" opacity=".85"><circle cx="677" cy="251" r="10"/><circle cx="680" cy="282" r="10"/><circle cx="559" cy="272" r="10"/><circle cx="678" cy="304" r="10"/></g>
+          <g fill="var(--blue)"><circle cx="541" cy="310" r="10"/><circle cx="523" cy="422" r="10"/><circle cx="268" cy="297" r="10"/></g>
+          <g fill="var(--gold)"><circle cx="69" cy="86" r="10"/><circle cx="140" cy="142" r="10"/><circle cx="491" cy="361" r="10"/><circle cx="288" cy="46" r="10"/></g>
+          <g class="pn" fill="#fff">
+            <text x="657" y="329">1</text><text x="648" y="264">2</text><text x="514" y="260">3</text>
+            <text x="455" y="157">4</text><text x="155" y="131">5</text>
+            <text x="677" y="255">6</text><text x="680" y="286">7</text><text x="559" y="276">8</text>
+            <text x="678" y="308">9</text>
+            <text x="541" y="314">10</text><text x="523" y="426">11</text><text x="268" y="301">12</text>
+            <text x="69" y="90">13</text><text x="140" y="146">14</text><text x="491" y="365">15</text>
+            <text x="288" y="50">16</text>
+          </g>
+        </g>
+
+        <!-- north + scale -->
+        <g transform="translate(700,60)">
+          <path d="M0 22 L0 0 M0 0 L-4 7 M0 0 L4 7" stroke="var(--faint)" stroke-width="1.3" fill="none"/>
+          <text class="ms" x="-4" y="34">N</text>
+        </g>
+        <g transform="translate(60,432)">
+          <path d="M0 0 L112 0 M0 -4 L0 4 M112 -4 L112 4" stroke="var(--faint)" stroke-width="1.2" fill="none"/>
+          <text class="ms" x="34" y="-6">1 MILE</text>
+        </g>
+      </svg>
+    </div>
+
+    <div class="mkey">
+      <div><span class="kd" style="color:var(--red)">Wed &middot; Mary</span>
+        <ol start="1"><li>Madison Bldg &middot; reader card 8:30</li><li>Russell SR-253 &middot; markup 10:00</li>
+        <li>National Archives 11:25</li><li>Planet Word 15:30</li><li>Georgetown &middot; dinner 19:30</li></ol></div>
+      <div><span class="kd" style="color:var(--red)">Thu &middot; Mary</span>
+        <ol start="6"><li>Hart &middot; Capitol tour 10:00</li><li>Supreme Court 12:20</li>
+        <li>Folger <em>or</em> Nat&#8217;l Gallery 14:00</li><li>Library of Congress 15:45</li></ol></div>
+      <div><span class="kd" style="color:var(--blue)">Fri &middot; Ryan</span>
+        <ol start="10"><li>Air &amp; Space 10:00</li><li>The Wharf 18:00</li>
+        <li>FDR &#8594; MLK &#8594; Lincoln 20:35</li></ol></div>
+      <div><span class="kd" style="color:var(--gold)">Sat &middot; Violet</span>
+        <ol start="13"><li>Georgetown University 9:30</li><li>Harbour dock &middot; boat 12:45</li>
+        <li>Spy Museum 14:00</li><li>Embassy Row 17:30</li></ol></div>
+    </div>
+    <figcaption>Plotted to scale from real coordinates &middot; grey dots are landmarks you pass, not stops</figcaption>
+  </figure>
+</section>
+
+<!-- ===== HEARINGS ===== -->
+<section id="hearings">
+  <div class="shead"><h2><svg class="ico" aria-hidden="true"><use href="#i-gavel"/></svg>Committee hearings</h2>
+    <span class="kicker">Posted schedule &middot; checked Mon 3 Aug</span></div>
+  <p class="lede">Committee is where legislation is written. The floor is where it gets announced. <b>Every one of these is open to the public and free to walk into</b> — no pass, no host, no reservation. Clear building security and sit down.</p>
+
+  <div class="flag">
+    <span class="kicker"><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg>Read the room codes</span>
+    <p><b>SR</b> = Russell &middot; <b>SD</b> = Dirksen &middot; <b>SH</b> = Hart &middot; <b>RHOB</b> = Rayburn (House side). All three Senate buildings connect underground to each other and to the Capitol — you never go outside. A <b>markup</b> beats a <b>hearing</b>: markup is amendments and votes, hearing is witnesses and speeches.</p>
+  </div>
+
+  <details open>
+    <summary><b>Wednesday 5 August</b> — including the one you're now planning your morning around</summary>
+    <div class="dbody" style="max-width:none;padding-left:0">
+      <div class="hear star">
+        <div class="when">10:00<span class="room">SR-253</span><span class="bldg">Russell</span></div>
+        <div><span class="type mk">Markup &middot; Commerce, Science &amp; Transportation</span>
+          <h4>Child safety online, AI chatbot verification, AI-enabled toys</h4>
+          <p><b>Cantwell's own committee</b> — she is Ranking Member — marking up AI and child-safety bills. A live markup, on a subject aimed squarely at a sixteen-year-old, in the committee belonging to the office that booked your Capitol tour.</p>
+          <p><b>And Murray's office is <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=154+Russell+Senate+Office+Building%2C+Washington+DC" target="_blank" rel="noopener">154 Russell</a>.</b> Same building. Collect Thursday's gallery passes on the way in.</p></div>
+      </div>
+      <div class="hear">
+        <div class="when">14:30<span class="room">SD-628</span><span class="bldg">Dirksen</span></div>
+        <div><span class="type mk">Markup &middot; Indian Affairs</span>
+          <h4>Tribal land trust transfers, Native American health care</h4>
+          <p>An afternoon markup, if you'd rather trade the Portrait Gallery than the morning.</p></div>
+      </div>
+      <div class="hear">
+        <div class="when">10:00<span class="room">SD-342</span><span class="bldg">Dirksen</span></div>
+        <div><span class="type mk">Business meeting &middot; Homeland Security</span>
+          <h4>A contempt resolution, plus postal and disaster bills</h4>
+          <p>A contempt resolution is a committee exercising its own compulsory power. Rarer and more dramatic than the agenda line suggests.</p></div>
+      </div>
+      <div class="hear">
+        <div class="when">10:00<span class="room">SD-215</span><span class="bldg">Dirksen</span></div>
+        <div><span class="type">Hearing &middot; Finance</span>
+          <h4>Process approaches to Social Security solvency</h4>
+          <p>Substantive and dry in equal measure. Also 14:30 Judiciary subcommittee in SD-226 on the Muslim Brotherhood network, 10:15 Judiciary nominations in SH-216, 14:30 Small Business in SR-428A. Intelligence at 15:00 in SH-219 is <b>closed</b> — don't walk over.</p></div>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary><b>Thursday 6 August</b> — four options, one slots into your day for free</summary>
+    <div class="dbody" style="max-width:none;padding-left:0">
+      <div class="hear star">
+        <div class="when">11:00<span class="room">SD-419</span><span class="bldg">Dirksen</span></div>
+        <div><span class="type">Hearing &middot; Foreign Relations</span>
+          <h4>The U.S. response to global scam operations</h4>
+          <p><b>The pick.</b> Your tour ends 11:15 and Dirksen is a tunnel away — slip in at 11:20 for the back half, then take the 12:30 Supreme Court lecture instead of the 11:30. Costs nothing, and industrial-scale online fraud is a subject Violet will follow easily.</p></div>
+      </div>
+      <div class="hear">
+        <div class="when">9:30<span class="room">SR-318</span><span class="bldg">Russell</span></div>
+        <div><span class="type mk">Markup &middot; Agriculture</span>
+          <h4>Business meeting on the Agricultural Act of 2026</h4>
+          <p>The purest thing on the list — a full-committee markup with amendments. <b>But it collides head-on with your 10:00 Capitol tour.</b></p></div>
+      </div>
+      <div class="hear">
+        <div class="when">10:15<span class="room">SD-538</span><span class="bldg">Dirksen</span></div>
+        <div><span class="type">Hearing &middot; Banking &amp; Urban Affairs</span>
+          <h4>Capital access for Main Street businesses</h4>
+          <p>Also collides with the tour. Listed for completeness.</p></div>
+      </div>
+      <div class="hear">
+        <div class="when">14:00<span class="room">RHOB-2247</span><span class="bldg">Rayburn &middot; House side</span></div>
+        <div><span class="type">Briefing &middot; Helsinki Commission</span>
+          <h4>Wartime demographic challenges in Ukraine</h4>
+          <p>Fits the afternoon block, but it's a ten-minute walk to the House side and competes with the Senate gallery. <b>Take the gallery.</b> Keep this as the fallback if the CR clears early and the chamber goes quiet.</p></div>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary><b>Before you go, either day</b> — the one check that matters</summary>
+    <div class="dbody">
+      <p>Confirm at <a href="https://www.senate.gov/committees/hearings_meetings.htm" target="_blank" rel="noopener">senate.gov/committees/hearings_meetings.htm</a>. Agendas shift, and a recess-eve week shifts more than most.</p>
+      <p>Public seating is first-come and rows fill for anything newsworthy. <b>Arrive fifteen minutes early and sit at the back</b> so you can leave quietly when you've had enough — nobody minds, people come and go throughout.</p>
+    </div>
+  </details>
+</section>
+
+<!-- ===== BOOK ===== -->
+<section id="book">
+  <div class="shead"><h2><svg class="ico" aria-hidden="true"><use href="#i-ticket"/></svg>Book now</h2>
+    <span class="kicker">Two days out</span></div>
+  <div class="scroll">
+    <table>
+      <thead><tr><th class="n"></th><th>What</th><th>For</th><th>Cost</th><th></th></tr></thead>
+      <tbody>
+        <tr><td class="n">2</td><td class="b">Library of Congress, Thu 15:45</td><td><span class="pin m">Mary</span> <span class="pin r">Ryan</span></td><td class="c free">Free</td><td><a class="go" href="https://loc.usedirect.com/loc/" target="_blank" rel="noopener">Book</a></td></tr>
+        <tr><td class="n">3</td><td class="b">Spy Museum, Sat <b>14:00</b></td><td><span class="pin r">Ryan</span> <span class="pin v">Violet</span></td><td class="c paid">$25&ndash;36</td><td><a class="go" href="https://calendar.spymuseum.org/" target="_blank" rel="noopener">Book</a></td></tr>
+        <tr><td class="n">4</td><td class="b">Folger Shakespeare Library, Thu 14:00</td><td><span class="pin r">Ryan</span> <span class="pin v">Violet</span></td><td class="c free">Free</td><td><a class="go" href="https://www.folger.edu/visit/plan-your-visit/" target="_blank" rel="noopener">Book</a></td></tr>
+        <tr><td class="n">5</td><td class="b">Water taxi, Sat 12:45</td><td><span class="pin">All</span></td><td class="c paid">from $36</td><td><a class="go" href="https://www.potomacriverboatco.com/water-taxi/wharf/" target="_blank" rel="noopener">Book</a></td></tr>
+        <tr><td class="n">6</td><td class="b">Planet Word, Wed 15:30</td><td><span class="pin v">Violet</span></td><td class="c free">Free</td><td><a class="go" href="https://planetwordmuseum.org/plan-your-visit/" target="_blank" rel="noopener">Book</a></td></tr>
+        <tr><td class="n">7</td><td class="b">Four dinners</td><td><span class="pin">All</span></td><td class="c">$$&ndash;$$$</td><td><a class="go" href="https://www.opentable.com/washington-dc-restaurants" target="_blank" rel="noopener">Book</a></td></tr>
+        <tr><td class="n">8</td><td class="b">Ex-CIA Embassy Row walk, Sat 17:30</td><td><span class="pin r">Ryan</span> <span class="pin v">Violet</span></td><td class="c">Ask</td><td><a class="go" href="https://spyher.co/tours/" target="_blank" rel="noopener">Call</a></td></tr>
+        <tr><td class="n">&#10003;</td><td class="b" style="color:var(--blue)">Archives #464525082 &middot; Air &amp; Space YB7-RVW-C8SJ &middot; Georgetown tour &middot; Capitol tour &middot; gallery passes</td><td><span class="pin go">Done</span></td><td class="c free">&mdash;</td><td></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <details open>
+    <summary><b>Your gallery passes are not timed</b> — they're good for the whole Congress</summary>
+    <div class="dbody">
+      <p><b>Paper Senate gallery passes are valid for the entire two-year Congress</b> — a rule since 1981. Not date-stamped, not timed, and <b>reusable</b>. They are <em>not transferable</em>, so each person needs their own, but Mary's passes work on any day the gallery is open through the end of 2026.</p>
+      <p><b>What this changes:</b></p>
+      <ul>
+        <li><b>You can go more than once.</b> Duck in Wednesday after the markup, then go back Thursday when the votes are.</li>
+        <li><b>Re-entry is fine.</b> Leave when it goes quiet, come back when it doesn't. Re-checking bags and phones is the only friction.</li>
+        <li><b>Thursday is de-risked.</b> If votes land at an awkward hour, the pass doesn't expire.</li>
+      </ul>
+      <p><b>The real constraint is the Senate, not the pass.</b> The gallery opens 30 minutes before the Senate convenes and closes when it adjourns. Which is why <b>202-224-0057</b> matters more than the ticket in your pocket.</p>
+      <p><b>One exception:</b> the <a href="https://gallerypass.senate.gov/splash_page" target="_blank" rel="noopener">e-Gallery QR pass</a>, if you booked one as backup, <em>is</em> date-and-time specific. The paper pass is the flexible one.</p>
+      <p><b>Murray</b> (202) 224-2621 &middot; <b>Cantwell</b> (202) 224-3441 &middot; <b>Gallery status</b> 202-224-0057 &middot; <b>Switchboard</b> 202-224-3121</p>
+    </div>
+  </details>
+
+  <details>
+    <summary><b>Already asked and answered</b> — what's impossible, and why</summary>
+    <div class="dbody">
+      <p><b>Pentagon.</b> Weekdays only, so Saturday was never on — and reservations close 14 days out, a window that shut before you asked.</p>
+      <p><b>White House.</b> Congressional request, minimum 21 days. Lafayette Square and the north front from the fence is the whole of it.</p>
+      <p><b>Treasury.</b> The most exclusive tour in town, Saturdays by congressional request — but the <b>first and third</b> Saturdays. Aug 1 and 15 qualify; Aug 8 does not.</p>
+      <p><b>Washington Monument.</b> The 30-day window closed months ago. One shot remains: a day-before drop at <b>3:00 pm sharp</b> on <a href="https://www.recreation.gov/ticket/234635/ticket/1050" target="_blank" rel="noopener">recreation.gov</a>. Set an alarm for 2:58. Treat it as a lottery.</p>
+    </div>
+  </details>
+</section>
+
+<!-- ===== WEATHER ===== -->
+<section id="wx">
+  <div class="shead"><h2><svg class="ico" aria-hidden="true"><use href="#i-sun"/></svg>The heat</h2>
+    <span class="kicker">Forecast checked Mon 3 Aug</span></div>
+  <div class="wx">
+    <div><span class="wd">Wed 5</span><div class="deg cool">84&deg;</div><div class="sky">Shower &amp; t-storm, humid</div>
+      <div class="hit">Coolest and wettest. Check radar at 16:30 before Georgetown.</div></div>
+    <div><span class="wd">Thu 6</span><div class="deg warm">90&deg;</div><div class="sky">Storms in spots, humid</div>
+      <div class="hit">Irrelevant. You're indoors or in tunnels all day.</div></div>
+    <div><span class="wd">Fri 7</span><div class="deg scorch">97&deg;</div><div class="sky">Shower &amp; t-storm, humid</div>
+      <div class="hit">The hard day. Museum till 14:15, hotel till 17:45, marble after dark.</div></div>
+    <div><span class="wd">Sat 8</span><div class="deg scorch">Hot</div><div class="sky">Dry, sunny, settled</div>
+      <div class="hit">Storm risk gone, heat stays. Georgetown's campus is leafy and shaded.</div></div>
+  </div>
+
+  <div class="flag">
+    <span class="kicker"><svg class="ico" aria-hidden="true"><use href="#i-moon"/></svg>Friday night &middot; one decision, made at 19:00 over dinner</span>
+    <p>Storms in this pattern fire late afternoon and usually clear by mid-evening, and the memorials never close. So check radar at the Wharf: <b>clear, go at 20:35. Still active, push to 21:15</b> — Lincoln at half nine is better than Lincoln at half eight anyway.</p>
+  </div>
+
+  <details>
+    <summary>Sources disagree on Friday between 90 and 97 &mdash; <b>assume 97</b></summary>
+    <div class="dbody">
+      <p>Late July ran heat indices above 110 here. Treat any "feels like" figure as the real one and check <b>weather.gov/lwx</b> the night before. Even at 97 it will be mid-80s by 9 pm — which is why the memorials moved to after dark rather than getting cut.</p>
+      <p><b>Rule for the whole trip:</b> nothing outdoors between 11:30 and 16:00 longer than the ten minutes it takes to walk between two buildings.</p>
+    </div>
+  </details>
+</section>
+
+<!-- ===== TRANSPORT ===== -->
+<section id="move">
+  <div class="shead"><h2><svg class="ico" aria-hidden="true"><use href="#i-train"/></svg>Getting around</h2>
+    <span class="kicker">No car</span></div>
+  <p class="lede">Uber is the default and it's the right one. But Metro <b>beats it outright</b> on the Hill, and Georgetown is the one place it can't help you at all.</p>
+
+  <div class="cards">
+    <article><p class="kicker" style="color:var(--blue)">Take the train</p>
+      <h3><svg class="ico" aria-hidden="true"><use href="#i-dome"/></svg>Capitol Hill</h3>
+      <p><b>Capitol South</b> two blocks from the House buildings, <b>Union Station</b> at the other end. Street traffic round the Capitol on a session day is genuinely bad, and Wednesday and Thursday you're there early.</p>
+      <p class="cost">Tap a phone at the gate &middot; no SmarTrip needed</p></article>
+    <article><p class="kicker" style="color:var(--blue)">Also faster</p>
+      <h3><svg class="ico" aria-hidden="true"><use href="#i-column"/></svg>The Mall</h3>
+      <p><b>Smithsonian</b> and <b>L'Enfant Plaza</b> put you at the museum doors — including the Spy Museum on Saturday.</p>
+      <p class="cost">About $2.50 a ride</p></article>
+    <article><p class="kicker" style="color:var(--red)">Car only</p>
+      <h3><svg class="ico" aria-hidden="true"><use href="#i-cap"/></svg>Georgetown</h3>
+      <p><b>No Metro station</b> — the one neighborhood the system never reached. That's true of the university too, so Saturday's 9:30 tour means an Uber. <b>Leave by 8:55</b>; morning traffic on M Street is real.</p>
+      <p class="cost">About $18&ndash;22 from downtown</p></article>
+    <article><p class="kicker" style="color:var(--gold)">Worth it once</p>
+      <h3><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg>Water taxi</h3>
+      <p>Georgetown to the Wharf to Old Town. Slower than a car and entirely the point — breezy, on the river, and the only transport here Violet will photograph.</p>
+      <p class="cost">Saturday 12:45 &middot; day pass from $36</p></article>
+  </div>
+
+  <details>
+    <summary><b>The surge trap</b>, and how to name a pickup a driver can find</summary>
+    <div class="dbody">
+      <p><b>When a thunderstorm hits</b>, everyone outdoors opens the same app at the same second — fares double, waits triple. Metro is immune to weather. Caught out? Walk to a station rather than standing in the rain refreshing a map.</p>
+      <p><b>"The Smithsonian" and "the Capitol" mean nothing to a driver.</b> Use cross streets: Air &amp; Space is <b>Jefferson Drive at 6th</b>, the Portrait Gallery <b>8th and F</b>, the Library of Congress <b>1st and Independence</b>, Georgetown admissions <b>37th and O</b>.</p>
+      <p><b>Water</b> — every Smithsonian has bottle fillers; fill on the way <em>out</em>. <b>Umbrellas</b> — small folding ones only; a golf umbrella won't clear Capitol security.</p>
+    </div>
+  </details>
+</section>
+
+<!-- ===== DAY 1 ===== -->
+<article class="day d1" id="d1">
+  <div class="dayhead"><span class="kicker"><svg class="ico" aria-hidden="true"><use href="#i-quill"/></svg>Wednesday 5 August &middot; Mary’s day</span>
+    <h2>Founding Documents</h2>
+    <p class="tagline">Paper that made a country — and a committee writing the next one.</p></div>
+
+  <div class="slot"><div class="clock">8:30<small>to 9:10</small></div>
+    <div><h3><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg>Reader Card at the Madison Building</h3>
+      <p class="hook">Room <b>LM 133</b>, open 8:30 to noon. Twenty minutes, free, valid two years — then place the request for <b>Carrera 2.7</b> to be waiting in the Main Reading Room on Thursday. Ten-minute walk to Russell afterwards.</p>
+      <div class="pins"><span class="pin r">Ryan</span><span class="pin m">Mary</span><span class="pin hot">Leave the hotel 8:05</span><span class="pin">Photo ID</span></div>
+      <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=James+Madison+Memorial+Building%2C+101+Independence+Ave+SE%2C+Washington+DC" target="_blank" rel="noopener">Madison Building</a>
+    </div></div>
+
+  <div class="slot"><div class="clock">9:25<small>arrive</small></div>
+    <div><h3><svg class="ico" aria-hidden="true"><use href="#i-dome"/></svg>Russell Senate Office Building</h3>
+      <p class="hook">Constitution and Delaware NE. Security by 9:25, then <b>154 Russell</b> to collect Thursday's gallery passes if they're paper.</p>
+      <div class="pins"><span class="pin m">Mary</span><span class="pin">Photo ID</span></div>
+      <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=Russell+Senate+Office+Building%2C+Washington%2C+DC" target="_blank" rel="noopener">Russell Senate Office Bldg</a></div></div>
+
+  <div class="slot"><div class="clock">10:00<small>to 11:00</small></div>
+    <div><h3><svg class="ico" aria-hidden="true"><use href="#i-gavel"/></svg>Commerce markup &middot; <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Russell+Senate+Office+Building%2C+Washington+DC" target="_blank" rel="noopener">SR-253</a></h3>
+      <p class="hook">AI chatbot verification, AI-enabled toys, child safety online — marked up in Cantwell's own committee. <b>No pass, no reservation.</b> Walk in, sit at the back, stay as long as it holds you.</p>
+      <div class="pins"><span class="pin go">Free &middot; walk in</span><span class="pin m">Mary</span><span class="pin v">Violet</span></div>
+      <details><summary>Why a markup beats a hearing, and what you'll actually see</summary>
+        <div class="dbody">
+          <p>A hearing is witnesses and speeches. A <b>markup</b> is the committee working on the bill itself — amendments offered, argued, withdrawn, voted. It is the closest thing to watching legislation being written that exists in public.</p>
+          <p>Expect it to look chaotic and sound procedural. Members drift in and out. The chair moves fast. Somebody will say "I'll withdraw my amendment" after a quiet conversation at the side, and that conversation was the actual event.</p>
+        </div></details>
+    </div></div>
+
+  <div class="hop"><div class="clock">11:05</div><div class="mv"><svg class="ico" aria-hidden="true"><use href="#i-train"/></svg>Uber to the Archives &middot; 12 min</div></div>
+
+  <div class="slot"><div class="clock">11:25<small>to 13:00</small></div>
+    <div><h3><svg class="ico" aria-hidden="true"><use href="#i-quill"/></svg>National Archives</h3>
+      <p class="hook">The Declaration, the Constitution, the Bill of Rights — plus a 250th-anniversary exhibition that didn't exist a year ago.</p>
+      <div class="pins"><span class="pin lock">Ticket #464525082</span><span class="pin go">Valid all day</span><span class="pin">701 Constitution Ave NW</span></div>
+      <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=National+Archives+Museum%2C+701+Constitution+Ave+NW%2C+Washington%2C+DC" target="_blank" rel="noopener">National Archives Museum</a>
+      <details open><summary><b>Your ticket is more flexible than it looks</b></summary>
+        <div class="dbody">
+          <p>You booked <b>Free General Admission</b>, not $1 timed entry. It prints 10:00 AM, but general admission is valid for <b>entry any time between 10:00 and 5:00</b> — which is exactly why the markup morning costs you nothing.</p>
+          <p><b>The trade-off:</b> it doesn't guarantee entry at a given moment, and August queues here run up to an hour at peak. If you want the markup <em>and</em> a guaranteed slot, spend $3 on three timed-entry tickets for around 11:30 and keep the free ones as spares.</p>
+        </div></details>
+      <details><summary>What to look at, and the exhibition worth the detour</summary>
+        <div class="dbody">
+          <p><b>Rotunda first.</b> Then the Rubenstein Gallery for the 1297 Magna Carta and <em>Records of Rights</em>.</p>
+          <p><b>Free and Independent: A Celebration of the Declaration</b> opened this April for the 250th and runs to July 2027 — how the Declaration was written, how it's been protected for 250 years, and the men who signed it. Violet's entire AP U.S. History autumn in one room.</p>
+          <p>Ninety minutes is the right dose. Two hours is too many.</p>
+        </div></details>
+    </div></div>
+
+  <div class="slot"><div class="clock">13:10<small>to 14:15</small></div>
+    <div><h3><svg class="ico" aria-hidden="true"><use href="#i-fork"/></svg>Lunch</h3>
+      <p class="hook"><b>Oyamel</b> or <b>Jaleo</b>, both José Andrés, both three minutes away in Penn Quarter. Small plates in a room with some life to it.</p>
+      <details><summary>Or keep it simple</summary>
+        <div class="dbody"><p>The <b>Courtyard Cafe</b> inside the Portrait Gallery, under the glass canopy — about $15 a head and you're already where the afternoon starts.</p></div></details>
+    </div></div>
+
+  <div class="slot"><div class="clock">14:30<small>to 15:15</small></div>
+    <div><h3><svg class="ico" aria-hidden="true"><use href="#i-column"/></svg>Pennsylvania Avenue on foot</h3>
+      <p class="hook">The walk you'd have driven. Archives to the <b>Willard lobby</b> to <b>Lafayette Square</b> and the White House north front — a straight, mostly shaded line.</p>
+      <details><summary>Why the Willard lobby is worth two minutes</summary>
+        <div class="dbody"><p>Gilded, freezing, and the reputed birthplace of the word <b>lobbyist</b> — Grant supposedly escaped the White House to drink there and was ambushed by favour-seekers. The etymology is disputed and the story is probably too good to be true, which is itself a decent lesson. The air conditioning alone justifies it.</p></div></details>
+    </div></div>
+
+  <div class="slot"><div class="clock">15:30<small>to 17:15</small></div>
+    <div><h3><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg>Planet Word</h3>
+      <p class="hook">The day has been Mary's since nine in the morning. This is the swing back — a voice-activated museum in the 1869 Franklin School, and the one place on this list most likely to surprise everybody.</p>
+      <div class="pins"><span class="pin v">Violet</span><span class="pin go">Free &middot; $15 suggested</span><span class="pin">Book a pass</span></div>
+      <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=Planet+Word+Museum%2C+925+13th+St+NW%2C+Washington%2C+DC" target="_blank" rel="noopener">Planet Word</a>
+      <details><summary>What's actually in there</summary>
+        <div class="dbody">
+          <p>A 22-foot <b>talking word wall</b> that responds when you speak to it. A room where you deliver a famous speech off a teleprompter and hear yourself do it. Karaoke. A library where the books answer back when you open them.</p>
+          <p>It is free, rarely crowded, and photographs beautifully — the restored school building is worth the visit on its own.</p>
+        </div></details>
+      <details><summary><b>If you'd rather stay on theme:</b> the National Portrait Gallery instead</summary>
+        <div class="dbody">
+          <p><b>America's Presidents</b> on the second floor is the only complete presidential set outside the White House, and after a morning at the Archives it lands hard. Plus the Great Hall on three and the <b>Kogod Courtyard</b> under its undulating glass roof, which is the best photograph in the building.</p>
+          <p>Free, no ticket, open till 19:00 — so it also works as a bonus stop if Planet Word runs short.</p>
+        </div></details>
+    </div></div>
+
+  <div class="hop"><div class="clock">17:20</div><div class="mv"><svg class="ico" aria-hidden="true"><use href="#i-train"/></svg>Uber to Georgetown &middot; 15&ndash;20 min &middot; ~$18</div></div>
+
+  <div class="slot"><div class="clock">17:40<small>to 19:15</small></div>
+    <div><h3><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg>Georgetown</h3>
+      <p class="hook">Downhill from the shops to the water, which is the only sane direction to walk it.</p>
+      <details><summary>The route, and the staircase Violet will want</summary>
+        <div class="dbody">
+          <p>Start at <b>Wisconsin and M</b>. Down to the <b>Old Stone House</b> — 1765, the oldest building in Washington. Onto the <b>C&amp;O Canal towpath</b>, shaded and about ten degrees cooler than the street.</p>
+          <p>Then the <b>Exorcist Steps</b> at <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Exorcist+Steps%2C+36th+St+and+Prospect+St+NW%2C+Washington+DC" target="_blank" rel="noopener">36th and Prospect</a> — 75 steps, genuinely steep, and the reason a stunt man wore padding to fall down them twice. They're on the edge of the university campus, so if tonight runs short you'll pass them again Saturday.</p>
+        </div></details>
+    </div></div>
+
+  <div class="eat"><span class="lbl"><svg class="ico" aria-hidden="true"><use href="#i-fork"/></svg>Dinner &middot; 19:30</span>
+    <h3>Filomena Ristorante</h3>
+    <p>Grandmothers rolling pasta in the front window, and decor that changes with the season and has never once been described as restrained.</p>
+    <details><summary>Two alternatives</summary>
+      <div class="dbody">
+        <p><b>Martin's Tavern</b> — 1933, and booth three is where JFK proposed to Jackie.</p>
+        <p><b>1789</b> — a Federal-period townhouse, the dressiest room of the four nights.</p>
+      </div></details>
+  </div>
+</article>
+
+<!-- ===== DAY 2 ===== -->
+<article class="day d2" id="d2">
+  <div class="dayhead"><span class="kicker"><svg class="ico" aria-hidden="true"><use href="#i-dome"/></svg>Thursday 6 August &middot; Mary's day, part two</span>
+    <h2>The Machine Running</h2>
+    <p class="tagline">A staff-led tour, a live floor, and a shutdown bill in motion.</p></div>
+
+  <div class="flag good">
+    <span class="kicker"><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg>The coincidence nobody could have arranged</span>
+    <p><b>Patty Murray is Vice Chair of Senate Appropriations — and she personally negotiated the bill the Senate is voting on this week.</b> The continuing resolution was struck between Murray and Republican Chair Susan Collins. Mary's gallery passes came from the office of the senator who <em>co-wrote the legislation she'll be watching pass.</em></p>
+  </div>
+
+  <div class="slot"><div class="clock">8:00<small>to 8:45</small></div>
+    <div><h3><svg class="ico" aria-hidden="true"><use href="#i-fork"/></svg>Breakfast on the Hill</h3>
+      <p class="hook">Le Bon Cafe or Bullfrog Bagels, both full of staffers at that hour. Earlier than you'd like — the 10:00 tour sets the alarm.</p></div></div>
+
+  <div class="slot"><div class="clock">9:15<small>to 9:50</small></div>
+    <div><h3><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg>Security, then a Calder</h3>
+      <p class="hook">Through early, then twenty spare minutes under <em>Mountains and Clouds</em> in the Hart Atrium — 51 feet tall, the last work Calder made.</p>
+      <div class="pins"><span class="pin hot">Re-read the confirmation email</span><span class="pin">Photo ID, no big bags</span></div>
+      <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=Hart+Senate+Office+Building%2C+Washington%2C+DC" target="_blank" rel="noopener">511 Hart Senate Office Bldg</a>
+      <details><summary><b>Where exactly to go</b> — do not guess this one</summary>
+        <div class="dbody">
+          <p>Cantwell's office is <b>511 Hart</b>. Staff tours start either there or at the Capitol Visitor Center, and <b>the two are a ten-minute walk apart</b>. The confirmation email says which. Read it Wednesday night, not Thursday morning.</p>
+        </div></details>
+    </div></div>
+
+  <div class="slot"><div class="clock">10:00<small>to 11:15</small></div>
+    <div><h3><svg class="ico" aria-hidden="true"><use href="#i-dome"/></svg>Staff-led Capitol tour</h3>
+      <p class="hook">Longer and better than the public one, and it goes places the public tour can't.</p>
+      <div class="pins"><span class="pin lock">Booked</span><span class="pin m">Mary</span></div>
+      <details><summary><b>Ask for two rooms by name</b>, and three questions worth more than the script</summary>
+        <div class="dbody">
+          <p>Visitor Center tours run 45 minutes across three rooms: Crypt, Rotunda, Statuary Hall. <b>Staff tours run an hour to ninety minutes and typically add the Old Senate Chamber and the Old Supreme Court Chamber.</b> Neither is on the public route. Ask for both.</p>
+          <p>The Old Senate Chamber is where Webster, Clay and Calhoun argued the Union to breaking point. It beats another corridor of statues.</p>
+          <p><b>Your guide is a Cantwell staffer, not a script-reader.</b> How does the office decide a position? What does a vote day actually look like? What happens to the CR this week?</p>
+        </div></details>
+    </div></div>
+
+  <div class="slot"><div class="clock">11:20<small>to 12:05</small></div>
+    <div><h3><svg class="ico" aria-hidden="true"><use href="#i-gavel"/></svg>Foreign Relations &middot; <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Dirksen+Senate+Office+Building%2C+Washington+DC" target="_blank" rel="noopener">SD-419</a></h3>
+      <p class="hook">Global scam operations. A tunnel away from where the tour ends — slip in at the back for the second half.</p>
+      <div class="pins"><span class="pin go">Free &middot; walk in</span><span class="pin m">Mary</span></div>
+      <details><summary>Skip it if the tour runs long — here's what shifts</summary>
+        <div class="dbody">
+          <p>Skip and you take the <b>11:30 Supreme Court lecture</b> instead of the 12:30; everything slides an hour earlier and the day is calmer. Go, and you take the <b>12:30 lecture</b> with lunch at 13:10.</p>
+        </div></details>
+    </div></div>
+
+  <div class="slot"><div class="clock">12:20<small>to 13:00</small></div>
+    <div><h3><svg class="ico" aria-hidden="true"><use href="#i-column"/></svg>Supreme Court building</h3>
+      <p class="hook">The Great Hall, the exhibits, the visitor film — and the two <b>self-supporting spiral staircases</b>, which climb five storeys with no central column and are the best photograph in the building.</p>
+      <div class="pins"><span class="pin go">Free, no ticket</span><span class="pin hot">Courtroom closed all August</span><span class="pin">Building shuts 15:00</span></div>
+      <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=Supreme+Court+of+the+United+States%2C+1+First+St+NE%2C+Washington%2C+DC" target="_blank" rel="noopener">Supreme Court</a>
+      <details open><summary><b>Correction — the Courtroom lecture is off</b>, and it's not a maybe</summary>
+        <div class="dbody">
+          <p>I had this as a highlight and it was wrong. <b>The Courtroom is closed from Friday 1 August to Friday 29 August</b> — the whole of your visit — and <b>no courtroom lectures take place</b> during that window. August dates aren't even bookable.</p>
+          <p>The counter-intuitive part is that lectures normally run <em>because</em> the Court isn't sitting — the Courtroom is free, so docents use it. Summer is usually the best time for them. This particular August is the exception.</p>
+          <p><b>What's still worth the forty minutes:</b> the marble Great Hall with its busts of every Chief Justice, the ground-floor exhibitions on the Court's history, the visitor film, and the spiral staircases. Free, three minutes from the Capitol, and quiet. Just go in knowing you'll not see the bench.</p>
+          <p><b>Confirm on the day</b> at <a href="https://www.supremecourt.gov/visiting/courtroomlectures.aspx" target="_blank" rel="noopener">supremecourt.gov</a> or by checking "Today at the Court" on their homepage — and if the building itself is shut for the same maintenance, give the time to the Senate gallery instead.</p>
+        </div></details>
+    </div></div>
+
+  <div class="slot"><div class="clock">13:10<small>to 13:50</small></div>
+    <div><h3><svg class="ico" aria-hidden="true"><use href="#i-fork"/></svg>Dirksen staff cafeteria</h3>
+      <p class="hook">Open to the public, and mid-funding-fight it's wall-to-wall with Senate staff on deadline. Tunnel from the Capitol. About $12.</p></div></div>
+
+  <div class="slot"><div class="clock">14:00<small>to 15:30</small></div>
+    <div><h3><svg class="ico" aria-hidden="true"><use href="#i-dome"/></svg>Senate gallery, on the CR</h3>
+      <p class="hook">All three of you. <b>Call 202-224-0057 first thing</b> and ask when votes are expected, then bend this block around the answer — your passes don't expire, so go when the floor is live rather than when the schedule says.</p>
+      <div class="pins"><span class="pin lock">Passes in hand</span><span class="pin hot">No bags, phones or cameras</span><span class="pin">Check station at the door</span></div>
+      <details open><summary><b>If Ryan and Violet would rather not</b> — two things, both beside the Library</summary>
+        <div class="dbody">
+          <p>A funding-bill roll call is Mary's idea of a good afternoon and possibly nobody else's. These two are a four-minute walk from the Capitol and a <b>two-minute walk from the Library of Congress steps</b>, so the 15:45 reconvene is trivial. You can do both in ninety minutes.</p>
+          <p><b>Folger Shakespeare Library</b> — the pick. Reopened in 2024 after a four-year rebuild, and for the first time <b>all 82 of its First Folios are displayed together</b>: the largest collection on earth, and the book that preserved eighteen plays — <em>Macbeth</em> and <em>Julius Caesar</em> among them — that would otherwise have been lost. There's an Elizabethan theatre and new gardens too. Free, $15 suggested, and <b>reserve a timed pass</b> for the exhibition halls. <a href="https://www.folger.edu/visit/plan-your-visit/" target="_blank" rel="noopener">folger.edu</a></p>
+          <p><b>United States Botanic Garden</b> — the no-booking backup, three minutes from the Capitol's west front. Free, no ticket, open 10 to 5. The Jungle room sits under a <b>93-foot glass dome with a canopy walkway</b> running through the treetops, which is both the coldest and the most photogenic ten minutes on Capitol Hill. Half an hour is plenty. <a href="https://www.usbg.gov/visit" target="_blank" rel="noopener">usbg.gov</a></p>
+          <p><b>National Gallery of Art</b> — the low-effort one, and the pure break. Twelve minutes west along the Mall, and the underground concourse joining the two buildings is <b>Multiverse</b>: 41,000 programmed LEDs running 200 feet overhead, never repeating the same pattern twice. You walk through it rather than at it. Free, no ticket, open till 17:00, and it asks nothing of you after a morning of marble and procedure. Twenty minutes if you're only there for the tunnel; an hour if the East Building's Calder mobile pulls you upstairs.</p>
+          <p><b>Still on the table:</b> the Helsinki Commission briefing at 14:00 in RHOB-2247 on wartime Ukraine, if a second committee room appeals more than a first folio.</p>
+          <p><b>Or save it for Friday.</b> The concourse entrance is a six-minute walk from Mitsitam, so a 20-minute detour after lunch works too — worth it on the hottest day of the trip, though it does eat the front of the hotel rest block.</p>
+        </div></details>
+      <details><summary><b>What to watch for from the gallery</b> — four things that look like nothing</summary>
+        <div class="dbody">
+          <p><b>Cloture versus passage.</b> Cloture ends debate and needs 60; passage needs 51. The Senate votes twice on the same bill and the first vote is the real one.</p>
+          <p><b>"Without objection, so ordered."</b> Most Senate business happens by unanimous consent — a clerk reading an agreement nobody objects to. Hear that phrase and you just watched the Senate legislate.</p>
+          <p><b>The well.</b> During a roll call, senators gather at the front, and that is where the persuasion happens. A fifteen-minute vote routinely runs forty-five because of it.</p>
+          <p><b>An empty chamber is normal, not broken.</b> Members are in committee or negotiating. They come for votes.</p>
+        </div></details>
+    </div></div>
+
+  <div class="slot"><div class="clock">15:45<small>to 17:00</small></div>
+    <div><h3><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg>Library of Congress</h3>
+      <p class="hook">The Great Hall is the most photogenic interior in Washington. No qualifier needed. And somewhere in this building are two books with Ryan's name on the spine.</p>
+      <div class="pins"><span class="pin go">Free timed entry</span><span class="pin m">Mary</span><span class="pin r">Ryan</span><span class="pin hot">Last entry 16:30</span></div>
+      <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=Thomas+Jefferson+Building%2C+Library+of+Congress%2C+10+First+St+SE%2C+Washington%2C+DC" target="_blank" rel="noopener">Library of Congress, Jefferson Bldg</a>
+      <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=National+Gallery+of+Art+East+Building%2C+Washington%2C+DC" target="_blank" rel="noopener">Nat'l Gallery &middot; Multiverse concourse</a>
+      <details open><summary><b>Turbo 3.0 is in the catalogue — and it's offsite.</b> Here's what that actually means</summary>
+        <div class="dbody">
+          <p>The record reads:</p>
+          <p style="font-family:var(--mono);font-size:12.5px;background:var(--panel);border:1px solid var(--rule);border-radius:2px;padding:12px 14px;line-height:1.7">Status &nbsp;Available<br>Location &nbsp;Science &amp; Business Reading Room Only (Adams, 5th Floor)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Offsite<br>Call no. &nbsp;TL215.P75 S575 2018 CABIN BRANCH SpecMat</p>
+          <p><b>Decoded, line by line:</b></p>
+          <ul>
+            <li><b>TL215.P75</b> — Technology, motor vehicles, Porsche. Exactly where a marque history belongs, and <b>S575</b> is the Cutter number for Snodgrass. That call number is yours.</li>
+            <li><b>Science &amp; Business Reading Room Only</b> — it does not circulate to the Main Reading Room. It can only be consulted in that specific room, on the <b>5th floor of the John Adams Building</b>, which is a different building from the Jefferson one your timed entry is for.</li>
+            <li><b>Offsite &middot; CABIN BRANCH</b> — the volume is not on Capitol Hill at all. Cabin Branch is the Library's off-site store. Retrieval is measured in <b>business days, not hours</b>.</li>
+            <li><b>SpecMat</b> — special materials handling, which adds another approval step.</li>
+          </ul>
+          <p><b>The honest verdict: you cannot hold this copy on Thursday.</b> Offsite plus a restricted reading room plus special-materials handling is at minimum a next-business-day retrieval, and you fly home before that lands. No amount of turning up early fixes it.</p>
+          <p><b>The one call worth making tomorrow.</b> Ring the Library on <b>202-707-5000</b> and ask for the <b>Science, Technology &amp; Business Division</b>, or write via <a href="https://ask.loc.gov">ask.loc.gov</a>. Tell them plainly: you are the author, you are in Washington Thursday only, and you would like to know whether an advance recall from Cabin Branch to the Adams reading room is possible for that afternoon. Sometimes it is. Librarians are quite good to authors who ask nicely, and the worst outcome is a no you already have.</p>
+          <p><b>Check Carrera 2.7 separately.</b> You've only pulled one record. The 2015 title may sit in the general collections rather than Science &amp; Business, and if it is on-site it behaves completely differently — that one <em>could</em> come to a reading room the same day.</p>
+        </div></details>
+
+      <details open><summary><b>Carrera 2.7 is onsite. This one you can actually hold.</b></summary>
+        <div class="dbody">
+          <p><b>General Collections &middot; Onsite</b> — which is a completely different animal from Turbo 3.0. Onsite means it lives in the closed stacks under Capitol Hill, and a registered reader can have it carried up to a desk in the <b>Main Reading Room</b>. Same day. Under the dome.</p>
+          <p><b>The obstacle is only clock arithmetic.</b> Registration takes about 20 minutes, retrieval runs 45 to 90, and you don't reach the Library until 15:45 on a day it closes at 17:00. Placing the request when you arrive is too late. So place it <em>earlier</em> and let the book be waiting.</p>
+          <p><b>Route A — Wednesday morning, and it costs you almost nothing.</b> Reader registration is at the <b>Madison Building, room LM 133</b>, open Tuesday to Saturday <b>8:30 to noon</b>. Madison is a ten-minute walk from Russell, where you already need to be by 9:25 for the markup.</p>
+          <ul>
+            <li><b>8:05</b> leave the hotel instead of 9:00</li>
+            <li><b>8:30</b> Madison LM 133 — photo ID, register, free card, valid two years</li>
+            <li><b>8:55</b> place the request for Carrera 2.7, delivery to the Main Reading Room, <b>for Thursday</b></li>
+            <li><b>9:10</b> walk to Russell &mdash; you are back on schedule with the morning untouched</li>
+          </ul>
+          <p><b>Route B — Thursday, trading the Foreign Relations hearing.</b> Skip the 11:20 hearing, walk to Madison instead, register before the noon cut-off and request the book immediately. It will be on the desk by mid-afternoon, waiting when you arrive at 15:45. You lose a committee room and gain your own book.</p>
+          <p><b>Before either:</b> check whether the Library now lets you <b>pre-register online</b> and simply collect the card at the desk — it would cut the Wednesday stop to five minutes. Worth two minutes on loc.gov tonight.</p>
+          <p><b>Then, on Thursday:</b> your own book, carried up out of the national collection by a stranger who has no idea you wrote it, placed on a desk beneath the dome of the Main Reading Room. Violet should take that photograph. Nothing else on this itinerary comes close.</p>
+        </div></details>
+
+      <details><summary>The other two ISBNs, and how to read any record you pull</summary>
+        <div class="dbody">
+          <p>Both Parabolica Press titles should be held. Search <a href="https://catalog.loc.gov" target="_blank" rel="noopener">catalog.loc.gov</a> by ISBN:</p>
+          <ul>
+            <li><b>Carrera 2.7</b> &mdash; <b>9780996268288</b></li>
+            <li><b>Turbo 3.0</b>, Limited Edition &mdash; <b>9780996268240</b></li>
+            <li><b>Turbo 3.0</b>, Publisher's Edition &mdash; <b>9780996268264</b></li>
+          </ul>
+          <p>Or search author <b>Snodgrass, Ryan</b>. Automotive marque histories classify around <b>TL215</b>. What you want off each record is the <b>LCCN</b> (control number), the <b>call number</b>, and — the one that decides everything — <b>the holding location.</b></p>
+          <p><b>Do this tonight, not on the day.</b> If the record says the volume lives on-site, retrieval to the Main Reading Room is possible. If it says <b>Fort Meade</b> — the off-site storage where most low-circulation books sleep — retrieval takes 24 to 72 hours and cannot happen during this trip. Better to know now.</p>
+        </div></details>
+      <details><summary><b>What to do instead on Thursday</b> — three things that do work</summary>
+        <div class="dbody">
+          <p>Given Turbo 3.0 is offsite, aim at these instead — in descending order of how good the moment is.</p>
+          <ul>
+            <li>A free <b>Reader Identification Card</b> — photo ID, about twenty minutes, anyone sixteen or older</li>
+            <li>An <b>on-site</b> holding, not Fort Meade</li>
+            <li><b>Roughly 45 to 90 minutes</b> for delivery after you place the request</li>
+          </ul>
+          <p><b>The problem:</b> you arrive at 15:45 and the building closes at 17:00. Registration plus retrieval does not fit inside 75 minutes.</p>
+          <p><b>What to do instead.</b> Ask at the desk whether the Jefferson Building's registration station (<b>room LJ 139</b>) is open that afternoon. If it is, get the card anyway — it's valid two years, it takes twenty minutes, and it makes the Main Reading Room something you can walk into and sit down in rather than look at from a balcony. Place the request before you leave; if the timing collapses, you've still stood in the room as a registered reader rather than a tourist.</p>
+          <p><b>The move that always works:</b> pull the catalogue record up on your phone standing in the Great Hall. Your own book, its own control number, in the catalogue of the Library of Congress. Show Violet. That is the moment, and it needs no card, no request slip and no waiting.</p>
+          <p><b>If you want certainty:</b> email the reference desk through <a href="https://ask.loc.gov" target="_blank" rel="noopener">ask.loc.gov</a> tomorrow — ask where those three ISBNs are held and whether same-day retrieval is possible on Thursday afternoon. They answer, and they are good at this.</p>
+        </div></details>
+      <details><summary>The rest of the building, in 75 minutes</summary>
+        <div class="dbody">
+          <p>The <b>Main Reading Room overlook</b>, <b>Jefferson's own library</b> in its circular gallery — rebuilt from the books he sold Congress after the British burned the first one — and the <b>Gutenberg Bible</b>, one of three perfect vellum copies in the world.</p>
+        </div></details>
+    </div></div>
+
+  <div class="eat"><span class="lbl"><svg class="ico" aria-hidden="true"><use href="#i-fork"/></svg>Dinner &middot; 19:00</span>
+    <h3>The Monocle</h3>
+    <p>The Senate's own restaurant since 1960, a block from Russell, walls papered in signed photographs — and a bell that rings when the Senate calls a vote so members can run back.</p>
+    <details><summary>Two alternatives</summary>
+      <div class="dbody">
+        <p><b>Rasika</b>, Penn Quarter — the best food of the four nights by a distance.</p>
+        <p><b>St. Anselm</b>, near Union Market — warm, handsome, live fire, and about as far from a marble corridor as this city gets.</p>
+      </div></details>
+  </div>
+</article>
+
+<!-- ===== DAY 3 ===== -->
+<article class="day d3" id="d3">
+  <div class="dayhead"><span class="kicker"><svg class="ico" aria-hidden="true"><use href="#i-rocket"/></svg>Friday 7 August &middot; Ryan's day</span>
+    <h2>Flight, then Marble</h2>
+    <p class="tagline">Museum through the worst heat. Monuments after dark, when they're empty.</p></div>
+
+  <div class="slot"><div class="clock">10:00<small>to 14:15</small></div>
+    <div><h3><svg class="ico" aria-hidden="true"><use href="#i-rocket"/></svg>Air &amp; Space</h3>
+      <p class="hook">Apollo 11's command module, the 1903 Wright Flyer, the <em>Spirit of St. Louis</em> — plus five galleries that opened four weeks ago.</p>
+      <div class="pins"><span class="pin lock">Booked &middot; YB7-RVW-C8SJ</span><span class="pin go">10:00 timed pass</span><span class="pin hot">No re-entry</span></div>
+      <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=National+Air+and+Space+Museum%2C+600+Independence+Ave+SW%2C+Washington%2C+DC" target="_blank" rel="noopener">Air &amp; Space Museum</a>
+      <details><summary><b>What's new since July 1</b>, and the case for driving to Virginia instead</summary>
+        <div class="dbody">
+          <p><b>Five new galleries opened on 1 July</b> — including <em>Discovering Our Universe</em> on modern astronomy and <em>World War II in the Air</em>. The billion-dollar renovation completes this autumn, so you're catching it near full strength.</p>
+          <p><b>Don't leave the building.</b> A timed pass has no re-entry. There's a cafe inside; use it.</p>
+          <p><b>The alternative: Udvar-Hazy in Chantilly.</b> Space Shuttle <em>Discovery</em> — staying put, after NASA halted the move to Houston — plus the <em>Enola Gay</em>, an SR-71 and a Concorde. Free entry, 40 minutes each way, about $65 per Uber leg.</p>
+          <p><b>How to choose:</b> if the interest is spaceflight hardware, Udvar-Hazy wins outright — a flown orbiter you stand underneath. If it's the icons of aviation history, stay downtown. You cannot sensibly do both.</p>
+        </div></details>
+    </div></div>
+
+  <div class="slot"><div class="clock">14:30<small>to 15:30</small></div>
+    <div><h3><svg class="ico" aria-hidden="true"><use href="#i-fork"/></svg>Mitsitam Native Foods Cafe</h3>
+      <p class="hook">Inside the Museum of the American Indian, five minutes' walk. Bison, frybread, cedar-planked salmon across four regional stations. Best food on the Mall. Shuts at 16:00.</p></div></div>
+
+  <div class="slot rest"><div class="clock">15:45<small>to 17:45</small></div>
+    <div><h3><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg>Hotel. Rest, shower, air conditioning.</h3>
+      <p class="hook">Non-negotiable on a 97-degree day. This block is the difference between the night walk feeling like a treat and feeling like a fourth wind.</p></div></div>
+
+  <div class="slot"><div class="clock">18:00<small>to 20:15</small></div>
+    <div><h3><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg>The Wharf</h3>
+      <p class="hook">Piers, swings, sunset on the Washington Channel, rooftop drinks for the adults. Then dinner on the water.</p></div></div>
+
+  <div class="slot"><div class="clock">20:35<small>to 22:15</small></div>
+    <div><h3><svg class="ico" aria-hidden="true"><use href="#i-moon"/></svg>The memorials, lit and empty</h3>
+      <p class="hook">The single best move of the trip. Fifteen degrees cooler, nearly deserted, and it photographs better than anything you'll see in daylight.</p>
+      <div class="choice">
+        <div class="ch main"><span class="lbl">Main &middot; walk it</span><h4>FDR to MLK to Lincoln</h4>
+          <p>1.2 miles, flat, paved, lit. Uber home from the Lincoln circle.</p><p class="cost">Free</p></div>
+        <div class="ch alt"><span class="lbl">If it's 97 degrees</span><h4>Guide and a cold SUV</h4>
+          <p>Adds Jefferson and the WWII Memorial, too far apart to walk. Five stops instead of three.</p><p class="cost">$400&ndash;700</p></div>
+      </div>
+      <details><summary>The route, timed &mdash; and the one everybody forgets</summary>
+        <div class="dbody">
+          <p><b>20:35 FDR.</b> Seven and a half acres of granite rooms and waterfalls, lit and almost empty.</p>
+          <p><b>21:00 MLK</b>, eight minutes on, the dark Tidal Basin behind him.</p>
+          <p><b>21:20 Lincoln.</b> Lit from below, the Reflecting Pool running east to the floodlit Washington Monument. Sit on the steps a while; this is the one.</p>
+          <p><b>Then loop back past the Korean War Memorial</b> — nineteen stainless steel soldiers advancing through juniper. At night, nobody forgets them. It's the stop people skip and the one they talk about afterwards.</p>
+        </div></details>
+    </div></div>
+
+  <div class="routebox">
+    <h4>The night walk, in Google Maps</h4>
+    <p>One tap gives you the whole route with live walking directions. 1.2 miles, flat, paved and lit the entire way.</p>
+    <div class="stops">
+      <span>20:35</span> Franklin Delano Roosevelt Memorial<br>
+      <span>21:00</span> Martin Luther King Jr. Memorial &nbsp;<span>&middot; 8 min</span><br>
+      <span>21:20</span> Lincoln Memorial &nbsp;<span>&middot; 12 min</span><br>
+      <span>21:50</span> Korean War Veterans Memorial &nbsp;<span>&middot; 4 min</span>
+    </div>
+    <a class="go" href="https://www.google.com/maps/dir/?api=1&amp;origin=Franklin+Delano+Roosevelt+Memorial,+Washington,+DC&amp;waypoints=Martin+Luther+King+Jr+Memorial,+Washington,+DC%7CLincoln+Memorial,+Washington,+DC&amp;destination=Korean+War+Veterans+Memorial,+Washington,+DC&amp;travelmode=walking" target="_blank" rel="noopener">Open walking route</a>
+  </div>
+
+  <div class="eat"><span class="lbl"><svg class="ico" aria-hidden="true"><use href="#i-fork"/></svg>Dinner &middot; 18:45 &middot; The Wharf</span>
+    <h3>Moon Rabbit</h3>
+    <p>Modern Vietnamese, acclaimed, on the water, ten minutes from the Tidal Basin when the light goes.</p>
+    <details><summary>Two alternatives</summary>
+      <div class="dbody">
+        <p><b>Officina</b>'s fourth-floor rooftop — less serious food, considerably better view.</p>
+        <p><b>Del Mar</b> — Spanish coastal, the grandest dining room on the Wharf.</p>
+      </div></details>
+  </div>
+</article>
+
+<!-- ===== DAY 4 ===== -->
+<article class="day d4" id="d4">
+  <div class="dayhead"><span class="kicker"><svg class="ico" aria-hidden="true"><use href="#i-cap"/></svg>Saturday 8 August &middot; Violet's day, twice over</span>
+    <h2>Her Future, Then Spies</h2>
+    <p class="tagline">A campus at nine. A cover identity at half one.</p></div>
+
+  <div class="flag good">
+    <span class="kicker"><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg>The cleanest day of the four</span>
+    <p>Three things instead of five, generous margins between them, and a boat in the middle of it. A campus tour, a river crossing, and a museum where you're handed a false identity at the door. <b>Everyone together all day.</b></p>
+  </div>
+
+  <div class="slot"><div class="clock">8:55<small>leave</small></div>
+    <div><h3><svg class="ico" aria-hidden="true"><use href="#i-train"/></svg>Uber to the Hilltop</h3>
+      <p class="hook">Georgetown has no Metro and M Street backs up on a Saturday morning. Ask for <b>37th and O</b>, not "Georgetown University" — the campus is large and the front gate is not where you want to be dropped.</p></div></div>
+
+  <div class="slot"><div class="clock">9:30<small>to 11:30</small></div>
+    <div><h3><svg class="ico" aria-hidden="true"><use href="#i-cap"/></svg>Georgetown University</h3>
+      <p class="hook">Office of Undergraduate Admissions, <b>White-Gravenor Hall 103</b>, <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=White-Gravenor+Hall%2C+3700+O+St+NW%2C+Washington+DC+20057" target="_blank" rel="noopener">3700 O St NW</a>. A 45-minute information session with an admissions officer, then a 75-minute student-led tour.</p>
+      <div class="pins"><span class="pin lock">Booked</span><span class="pin v">Class of 2028</span><span class="pin">Arrive 9:15</span></div>
+      <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=White-Gravenor+Hall%2C+3700+O+St+NW%2C+Washington%2C+DC" target="_blank" rel="noopener">White-Gravenor Hall</a>
+      <details open><summary><b>The question worth asking</b> that most families miss</summary>
+        <div class="dbody">
+          <p>Ask about the <b>School of Foreign Service</b> — founded 1919, the oldest international affairs school in the United States, and the reason a great many people apply to Georgetown at all. Given Violet's AP U.S. History year and everything else on this trip, that's the thread to pull.</p>
+          <p>Two follow-ups worth having ready: <b>how does SFS admission differ from the College</b>, and <b>what does a first-year actually take?</b></p>
+          <p>Then the practical one: Georgetown is fifteen minutes from the Capitol and students intern there <em>during term</em>, not only in summer. Ask what that looks like in a real weekly schedule — you'll have spent two days on the Hill by then and the answer will land differently.</p>
+        </div></details>
+      <details><summary>What to look at while you walk</summary>
+        <div class="dbody">
+          <p><b>Healy Hall</b> is the 1879 spired building on every brochure — Flemish Romanesque, and its clock hands have been stolen by students so often it became a tradition. <b>Dahlgren Chapel</b> and the quad behind it are the quiet heart of campus. From <b>Copley Lawn</b> you look out over the Potomac.</p>
+          <p>The <b>Exorcist Steps</b> are at <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Exorcist+Steps%2C+36th+St+and+Prospect+St+NW%2C+Washington+DC" target="_blank" rel="noopener">36th and Prospect</a>, on the edge of campus — catch them here if Wednesday evening ran short.</p>
+        </div></details>
+    </div></div>
+
+  <div class="slot"><div class="clock">11:40<small>to 12:35</small></div>
+    <div><h3><svg class="ico" aria-hidden="true"><use href="#i-fork"/></svg>Lunch at Washington Harbour</h3>
+      <p class="hook">Down the hill to the waterfront rather than up to M Street — because you're catching a boat, and the dock is right there.</p>
+      <details><summary>Where to sit</summary>
+        <div class="dbody">
+          <p><b>Farmers Fishers Bakers</b> or <b>Nick's Riverside Grill</b>, both on the Washington Harbour terrace with the Potomac in front of you. Neither is remarkable food; both are exactly right for the twenty minutes before a boat.</p>
+          <p><b>If you'd rather eat well:</b> <b>Chaia</b> for tacos or <b>Call Your Mother</b> for bagels, both up on the M Street side — but leave ten minutes earlier to walk back down.</p>
+        </div></details>
+    </div></div>
+
+  <div class="slot"><div class="clock">12:45<small>to 13:20</small></div>
+    <div><h3><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg>Water taxi to The Wharf</h3>
+      <p class="hook">Thirty minutes down the Potomac instead of twenty-five in traffic, and you pass the Kennedy Center, Roosevelt Island, the Lincoln and the Jefferson from the water. The best-value fun on the whole itinerary.</p>
+      <div class="pins"><span class="pin hot">Book ahead &middot; 877-511-2628</span><span class="pin">Day pass from $36</span><span class="pin v">Violet's photographs</span></div>
+      <details open><summary><b>Book this today</b> — and ask one specific question</summary>
+        <div class="dbody">
+          <p>Potomac Water Taxi, operated by City Cruises. Georgetown to The Wharf is roughly <b>30 minutes</b>, running every 30 to 60 minutes depending on the day, March through December. <a href="https://www.potomacriverboatco.com/water-taxi/wharf/" target="_blank" rel="noopener">potomacriverboatco.com</a> or <b>877-511-2628</b>.</p>
+          <p><b>The question to ask:</b> day passes start around $36 a head, which is steep for one leg — <b>ask whether a one-way ticket is available</b> for the Georgetown to Wharf run. If not, the day pass still beats an Uber for what you get.</p>
+          <p><b>Reserve in advance.</b> Saturday afternoon in August is peak, boats fill, and missing the 12:45 means waiting for the next one with a Spy Museum slot ticking.</p>
+          <p><b>Where to board:</b> the dock at <b>Washington Harbour</b>, <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Washington+Harbour%2C+3050+K+St+NW%2C+Washington+DC" target="_blank" rel="noopener">3050 K Street NW</a> — a five-minute walk down from lunch.</p>
+        </div></details>
+    </div></div>
+
+  <div class="hop"><div class="clock">13:25</div><div class="mv"><svg class="ico" aria-hidden="true"><use href="#i-train"/></svg>Wharf to the Spy Museum &middot; 12 min walk or a 5 min Uber</div></div>
+
+  <div class="slot"><div class="clock">14:00<small>to 17:00</small></div>
+    <div><h3><svg class="ico" aria-hidden="true"><use href="#i-eye"/></svg>International Spy Museum</h3>
+      <p class="hook">A cover identity at the door, tested as you go. Real tradecraft, a working Enigma, and the best-paced exhibit narrative in the city.</p>
+      <div class="pins"><span class="pin r">Ryan</span><span class="pin v">Violet</span><span class="pin hot">Book 14:00, not 13:30</span><span class="pin">$25&ndash;36, rising daily</span></div>
+      <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=International+Spy+Museum%2C+700+L+Enfant+Plaza+SW%2C+Washington%2C+DC" target="_blank" rel="noopener">International Spy Museum</a>
+      <details><summary><b>Book the 14:00 slot</b> — the boat changes the timing</summary>
+        <div class="dbody"><p>The earlier plan had you here at 13:30 by car. The water taxi lands at 13:20 and you still have to cross to L'Enfant, so <b>book 14:00</b>. It also gives you a buffer if the boat runs late, which boats do.</p></div></details>
+    </div></div>
+
+  <div class="slot"><div class="clock">17:30<small>to 19:00</small></div>
+    <div><h3><svg class="ico" aria-hidden="true"><use href="#i-eye"/></svg>Embassy Row, with a former CIA officer</h3>
+      <p class="hook">Ninety minutes up Massachusetts Avenue with someone who worked the trade. Dead drops, surveillance detection routes, the actual buildings where actual things happened.</p>
+      <div class="pins"><span class="pin r">Ryan</span><span class="pin v">Violet</span><span class="pin hot">Price on request — phone them</span></div>
+      <details><summary>If it's booked, or Saturday has been long enough</summary>
+        <div class="dbody"><p><b>Kennedy Center rooftop terrace.</b> Free, open to anyone, and the best sunset view in Washington — Potomac, Georgetown, the Lincoln and the Monument in one sweep. Usually a free 18:00 performance on the Millennium Stage downstairs.</p></div></details>
+    </div></div>
+
+  <div class="eat"><span class="lbl"><svg class="ico" aria-hidden="true"><use href="#i-fork"/></svg>Dinner &middot; 19:30</span>
+    <h3>Cafe Riggs</h3>
+    <p>Dinner in an 1891 bank hall, with <b>Silver Lyan</b> — a cocktail bar inside the actual vault — downstairs. A better room and better food than the obvious choice, and a good story to fly home with.</p>
+    <details><summary>The classic, and two others</summary>
+      <div class="dbody">
+        <p><b>Old Ebbitt Grill</b> — 1856, the oldest saloon in Washington. Mahogany, gas lamps, velvet booths, serves past eleven.</p>
+        <p><b>The Hamilton</b> — big, easy, late. <b>The Watergate</b> — drinks only, to end on modern political history.</p>
+      </div></details>
+  </div>
+</article>
+
+<!-- ===== FLOOR ===== -->
+<section id="floor">
+  <div class="shead"><h2><svg class="ico" aria-hidden="true"><use href="#i-dome"/></svg>Floor briefing</h2>
+    <span class="kicker">Mary &middot; researched Mon 3 Aug</span></div>
+  <p class="lede">Enough to follow a government funding fight in real time, from the gallery.</p>
+
+  <details><summary><b>The bill</b> — a continuing resolution through December 11, and why it's technically an Africa trade bill</summary>
+    <div class="dbody">
+      <p><b>H.R. 6500</b> funds the government and averts a shutdown before the midterms. Cloture cleared <b>89&ndash;4 on Monday</b> — overwhelming and bipartisan, which means this passes rather than blows up. Recess is targeted around <b>10 August</b>.</p>
+      <p><b>Murray's own framing:</b> a "much-improved CR" that adds extensions the House version omitted, rejects the administration's war-spending request, and closes a loophole that would have let funds appropriated elsewhere move to Border Patrol. That sentence is a compressed lesson in what appropriations negotiation actually is — not whether to fund, but which riders survive.</p>
+      <p><b>Now look up H.R. 6500 and you'll find the AGOA Extension Act</b> — duty-free treatment for certain African imports. Not an error. The Constitution requires revenue bills to originate in the House, so the Senate takes an already-passed House bill, strips it to a shell, and drops the CR text in as a substitute. Everyone calls it the <b>legislative vehicle</b>. Ask the Cantwell staffer to explain it.</p>
+    </div></details>
+
+  <details><summary><b>The four no votes</b> are the interesting part</summary>
+    <div class="dbody">
+      <p>Kaine, Paul, Sanders and Warren. Two from the left, one libertarian right, one institutionalist. When a coalition fractures at both edges at once, the objection is almost always about <b>process</b> rather than content — governing by stopgap, no amendments allowed, take-it-or-leave-it timing.</p>
+      <p>Good question for Violet: why did those four end up in the same column as each other?</p>
+    </div></details>
+
+  <details><summary><b>Cantwell's committee authorizes NASA</b> — use this on Friday</summary>
+    <div class="dbody">
+      <p>Maria Cantwell is <b>Ranking Member of Commerce, Science and Transportation</b> — the committee you'll have sat in on Wednesday morning. This year it moved the <b>NASA Authorization Act of 2026</b> and the Weather Act. The office that booked your Capitol tour holds the top Democratic seat on the committee that writes NASA's authorization, and you're at Air &amp; Space the next morning.</p>
+      <p>Say so to the staffer. "We're at Air and Space tomorrow — what does the committee actually do for NASA?" hands Ryan a thread running from the Capitol to the Apollo capsule.</p>
+    </div></details>
+
+  <details><summary><b>A bill possibly dying in front of you</b> — the CLARITY Act</summary>
+    <div class="dbody">
+      <p>The crypto market-structure bill passed the House in 2025 and has been trying to reach the Senate floor ever since. It's now on a countdown to recess, still unscheduled, and three Democrats — Murphy, Van Hollen and Merkley — came out against it after a merged draft dropped an ethics provision they'd demanded.</p>
+      <p><b>This is the more useful lesson of the two.</b> The CR shows a bill passing. CLARITY shows the far more common outcome: a bill with majority support dying from calendar time, one missing provision, and three senators. Most bills die.</p>
+    </div></details>
+
+  <details><summary><b>Check these Wednesday night</b> — it will have moved</summary>
+    <div class="dbody">
+      <p><a href="https://www.congress.gov/on-senate-floor-today" target="_blank" rel="noopener">congress.gov/on-senate-floor-today</a> &middot; <a href="https://www.democrats.senate.gov/floor/senate-schedule" target="_blank" rel="noopener">democrats.senate.gov/floor/senate-schedule</a> &middot; <a href="https://www.senate.gov/committees/hearings_meetings.htm" target="_blank" rel="noopener">senate.gov committee schedule</a>.</p>
+      <p><b>Fair warning:</b> researched Monday. A funding fight two days from recess moves hourly — the CR could clear Wednesday and leave Thursday quiet, or slip and dominate it.</p>
+    </div></details>
+</section>
+
+<!-- ===== VIOLET ===== -->
+<section id="violet">
+  <div class="shead"><h2><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg>Best for Violet</h2>
+    <span class="kicker">You asked directly</span></div>
+  <p class="lede">Short answer: <b>not Natural History.</b> Two world-class objects, and otherwise the most stroller-dense building on the Mall in August. Honest ranking, best first.</p>
+
+  <details open><summary><b>1. Spy Museum</b> &middot; <b>2. Planet Word</b> &middot; <b>3. National Gallery light tunnel</b> — all three already in the plan</summary>
+    <div class="dbody">
+      <p><b>Spy Museum</b> is the one teenagers consistently rank first. Saturday 13:30.</p>
+      <p><b>Planet Word</b> is the sleeper — free, voice-activated, a room where you deliver a famous speech off a teleprompter, and almost nobody has it on their list. Wednesday 15:30.</p>
+      <p><b>Multiverse</b> at the National Gallery — 41,000 LEDs over 200 feet, never repeating. Thursday 14:00.</p>
+    </div></details>
+
+  <details><summary><b>4. American History</b> &middot; <b>5. Hirshhorn</b> &middot; <b>6. Natural History</b> — the substitutes, if a plan slips</summary>
+    <div class="dbody">
+      <p><b>American History</b> — ruby slippers, Julia Child's kitchen, the Greensboro lunch counter, the Star-Spangled Banner in its own dark chamber. Ninety good minutes, no ticket.</p>
+      <p><b>Hirshhorn</b> — a concrete doughnut of contemporary art, the most photogenic Smithsonian interior after the Kogod Courtyard. An hour is plenty.</p>
+      <p><b>Natural History</b> — the Hope Diamond and the Fossil Hall genuinely are world-class. But it's the most crowded building on the Mall in August and pitched young. The Butterfly Pavilion costs $6, needs its own ticket, and is <b>closed Saturdays</b>.</p>
+    </div></details>
+</section>
+
+<!-- ===== FINE PRINT ===== -->
+<section id="fine">
+  <div class="shead"><h2>Fine print</h2><span class="kicker">Money, fallbacks, gaps</span></div>
+
+  <details><summary><b>What this costs</b>, three people, four days</summary>
+    <div class="dbody"><ul>
+      <li><b>Museums and monuments</b> — near zero. The Archives is booked and free; everything else on the Mall is free.</li>
+      <li><b>Spy Museum</b> — $80 to $100. Book now; price is the only variable you control.</li>
+      <li><b>Guides</b> — $400 to $1,300 depending on whether you take the Friday SUV and the Saturday spy walk.</li>
+      <li><b>Transport</b> — $150 to $220. Metro on the Hill knocks real money off. Add $130 for Udvar-Hazy.</li>
+      <li><b>Lunches</b> — about $180. <b>Dinners</b> — $600 to $900.</li>
+    </ul></div></details>
+
+  <details><summary><b>If something breaks</b> — six fallbacks</summary>
+    <div class="dbody"><ul>
+      <li><b>Friday night rains out</b> — do the memorial walk Saturday night after dinner. Lincoln at 22:00 is worth rearranging for.</li>
+      <li><b>Air &amp; Space sold out</b> — alarm at 8:25 Friday, refresh at 8:30. Fallback: American History, no ticket.</li>
+      <li><b>Gallery is dead Thursday</b> — your pass doesn't expire. Go Wednesday after the markup instead.</li>
+      <li><b>Archives queue is long</b> — it's valid all day. Come back after lunch.</li>
+      <li><b>Thunderstorm</b> — every 15:00&ndash;18:00 block is already indoors or a hotel break. Walk to Metro, don't stand in it.</li>
+      <li><b>Someone hits the wall</b> — every split block works as a solo. Send them back and reconvene at dinner.</li>
+    </ul></div></details>
+
+  <details><summary><b>What I could not verify</b></summary>
+    <div class="dbody">
+      <p>Live guide availability for the Friday SUV and the Saturday spy walk — neither publishes a calendar, so phone them. Guide pricing — market estimates, not quotes. Spy Museum price for your exact date — dynamic. Thursday's Senate floor schedule and both days' committee agendas — all move hourly in a recess-eve week.</p>
+      <p>Whether the Jefferson Building reader-registration station (LJ 139) is open Thursday afternoon — ask at the desk. The Madison station is Tuesday to Saturday, 8:30 to noon only.</p>
+      <p><b>ARTECHOUSE</b> is listed as reopening "summer 2026" after renovation and I could not confirm it will be open your week. <b>Ford's Theatre</b> is partly closed for maintenance.</p>
+    </div></details>
+
+  <footer>
+    <svg class="stars wide" viewBox="0 0 260 13" style="max-width:230px" aria-hidden="true">
+      <g fill="currentColor" style="color:var(--gold)"><use href="#i-star" width="13" height="13"/>
+      <use href="#i-star" x="20.6" width="13" height="13"/><use href="#i-star" x="41.2" width="13" height="13"/>
+      <use href="#i-star" x="61.8" width="13" height="13"/><use href="#i-star" x="82.4" width="13" height="13"/>
+      <use href="#i-star" x="103" width="13" height="13"/><use href="#i-star" x="123.6" width="13" height="13"/>
+      <use href="#i-star" x="144.2" width="13" height="13"/><use href="#i-star" x="164.8" width="13" height="13"/>
+      <use href="#i-star" x="185.4" width="13" height="13"/><use href="#i-star" x="206" width="13" height="13"/>
+      <use href="#i-star" x="226.6" width="13" height="13"/><use href="#i-star" x="247" width="13" height="13"/></g>
+    </svg>
+    <p>Researched 29 July and 3 August 2026 &middot; Senate and House 2026 calendars, congress.gov, senate.gov, visit.archives.gov, loc.gov, supremecourt.gov, airandspace.si.edu, spymuseum.org, planetwordmuseum.org, nga.gov, uadmissions.georgetown.edu, spyher.co, weather.gov</p>
+  </footer>
+</section>
+
+</div>
+</body>
+</html>
