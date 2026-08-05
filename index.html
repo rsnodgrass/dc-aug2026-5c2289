@@ -277,6 +277,14 @@
   .stamp{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;
     color:var(--blue);border:1px solid var(--blue);border-radius:100px;padding:3px 9px;
     display:inline-block;vertical-align:2px;margin-left:8px}
+  .hclock{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:1px;
+    background:var(--rule);border:1px solid var(--rule);border-radius:2px;overflow:hidden;margin-top:16px}
+  .hclock .hband{background:var(--panel);padding:12px 13px}
+  .hclock span{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--faint);display:block}
+  .hclock b{font-family:var(--display);font-size:17px;display:block;margin:5px 0 3px}
+  .hclock i{font-style:normal;font-size:12px;color:var(--soft);line-height:1.35;display:block}
+  .hclock .ok{color:var(--blue)} .hclock .mid{color:var(--gold)} .hclock .bad{color:var(--red)}
   .mapl{display:inline-flex;align-items:center;gap:5px;font-family:var(--mono);font-size:9.5px;
     letter-spacing:.1em;text-transform:uppercase;color:var(--blue);text-decoration:none;
     border:1px solid var(--rule);border-radius:100px;padding:3px 9px;margin-top:9px;white-space:nowrap}
@@ -651,7 +659,7 @@
         <tr><td class="n">5</td><td class="b">Water taxi, Sat 12:45</td><td><span class="pin">All</span></td><td class="c paid">from $36</td><td><a class="go" href="https://www.potomacriverboatco.com/water-taxi/wharf/" target="_blank" rel="noopener">Book</a></td></tr>
         <tr><td class="n">6</td><td class="b">Planet Word, Wed 15:30</td><td><span class="pin v">Violet</span></td><td class="c free">Free</td><td><a class="go" href="https://planetwordmuseum.org/plan-your-visit/" target="_blank" rel="noopener">Book</a></td></tr>
         <tr><td class="n">7</td><td class="b">Four dinners</td><td><span class="pin">All</span></td><td class="c">$$&ndash;$$$</td><td><a class="go" href="https://www.opentable.com/washington-dc-restaurants" target="_blank" rel="noopener">Book</a></td></tr>
-        <tr><td class="n">8</td><td class="b">Ex-CIA Embassy Row walk, Sat 17:30</td><td><span class="pin r">Ryan</span> <span class="pin v">Violet</span></td><td class="c">Ask</td><td><a class="go" href="https://spyher.co/tours/" target="_blank" rel="noopener">Call</a></td></tr>
+        <tr><td class="n">8</td><td class="b">Ex-CIA Embassy Row walk, Sat <b>18:30</b></td><td><span class="pin r">Ryan</span> <span class="pin v">Violet</span></td><td class="c">Ask</td><td><a class="go" href="https://spyher.co/tours/" target="_blank" rel="noopener">Call</a></td></tr>
         <tr><td class="n">&#10003;</td><td class="b" style="color:var(--blue)">Archives 11:30 timed &middot; Air &amp; Space YB7-RVW-C8SJ &middot; Georgetown tour &middot; Capitol tour &middot; gallery passes</td><td><span class="pin go">Done</span></td><td class="c free">&mdash;</td><td></td></tr>
       </tbody>
     </table>
@@ -702,6 +710,37 @@
   </div>
 
   <div class="flag">
+    <span class="kicker"><svg class="ico" aria-hidden="true"><use href="#i-sun"/></svg>The heat clock &middot; when to be outside</span>
+    <p><b>Washington peaks between 2 and 5 pm</b>, with 3 pm the worst of it. Dew points in the mid-70s mean "feels like" runs 8&ndash;12&deg;F above the number, so a 91&deg; afternoon reads as low 100s in direct sun.</p>
+  </div>
+
+  <div class="hclock">
+    <div class="hband"><span>Before 10:00</span><b class="ok">Comfortable</b><i>Low 80s. Do outdoor things here.</i></div>
+    <div class="hband"><span>10:00&ndash;12:00</span><b class="mid">Warming</b><i>Mid 80s. Short walks fine, shade helps.</i></div>
+    <div class="hband"><span>12:00&ndash;14:00</span><b class="mid">Hot</b><i>Keep walks under ten minutes.</i></div>
+    <div class="hband"><span>14:00&ndash;17:00</span><b class="bad">Avoid</b><i>Peak. Be indoors. This is what beat you Wednesday.</i></div>
+    <div class="hband"><span>17:00&ndash;19:00</span><b class="mid">Easing</b><i>Upper 80s but the sun is off the street.</i></div>
+    <div class="hband"><span>After 19:00</span><b class="ok">Good</b><i>Low 80s and falling. Why the memorials are at night.</i></div>
+  </div>
+
+  <details>
+    <summary><b>The four outdoor blocks left</b>, and what each one needs</summary>
+    <div class="dbody">
+      <ul>
+        <li><b>Sat 10:15&ndash;11:30 &middot; Georgetown campus tour.</b> The big one — 75 minutes of student-led walking, outdoors, unavoidable. It lands in the warming window rather than the peak, and the campus is genuinely leafy. <b>Water bottles, hats, and say yes to every shaded pause.</b></li>
+        <li><b>Sat 12:45 &middot; water taxi.</b> Thirty minutes on open water at midday — but there's shade and a breeze, and sitting still beats walking. Fine.</li>
+        <li><b>Sun 9:35&ndash;11:00 &middot; Eastern Market flea.</b> Outdoors, but you're done before the day turns. Correctly placed.</li>
+        <li><b>Sat 18:30 &middot; Embassy Row.</b> Ninety minutes on foot, but after five and under the Massachusetts Avenue trees, which are deep shade the whole way. Fine — <em>if</em> you can move it to 18:30.</li>
+      </ul>
+      <p><b>Two legs to change from walking to riding:</b></p>
+      <ul>
+        <li><b>Sat 13:25, Wharf to the Spy Museum.</b> I had this as a twelve-minute walk. That is 1:30 pm in 90&deg;F with no shade along Maine Avenue — <b>take a five-minute Uber instead</b>, about $9. Changed below.</li>
+        <li><b>Fri 14:30, Air &amp; Space to Mitsitam.</b> Only five minutes, but it is the single hottest moment of your week. Walk it slowly, or just eat inside Air &amp; Space and skip the crossing.</li>
+      </ul>
+    </div>
+  </details>
+
+<div class="flag">
     <span class="kicker"><svg class="ico" aria-hidden="true"><use href="#i-sun"/></svg>Wednesday rain &middot; only one block is exposed</span>
     <p><b>Good news: the front moves through in the morning.</b> Chance of rain runs 45% at 10am, 25% at 11am, then drops away — <b>20% by 1pm, 15% by 4pm, 15% at 7pm, 5% at 10pm</b>. The wettest part of the day is the part you spend in a committee room and the Archives.</p>
     <p><b>Nine of your ten Wednesday hours are already indoors.</b> Russell, the markup, the Archives, lunch, Planet Word — none of it cares. The single weather-exposed block is the <b>14:30 Pennsylvania Avenue walk</b>, and by then the odds are in your favour.</p>
@@ -1030,7 +1069,7 @@
 
   <div class="slot"><div class="clock">14:30<small>to 15:30</small></div>
     <div><h3><svg class="ico" aria-hidden="true"><use href="#i-fork"/></svg>Mitsitam Native Foods Cafe</h3>
-      <p class="hook">Inside the Museum of the American Indian, five minutes' walk. Bison, frybread, cedar-planked salmon across four regional stations. Best food on the Mall. Shuts at 16:00.</p></div></div>
+      <p class="hook">Inside the Museum of the American Indian, five minutes' walk. Bison, frybread, cedar-planked salmon across four stations. Best food on the Mall.</p><p class="hook"><b>That five-minute crossing is the hottest moment of your week</b> — 2:30 pm, no shade. Walk it slowly, or eat inside Air &amp; Space and skip it.</p></div></div>
 
   <div class="slot rest"><div class="clock">15:45<small>to 16:45</small></div>
     <div><h3><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg>Hotel. Rest, shower, air conditioning.</h3>
@@ -1113,7 +1152,7 @@
   <div class="slot"><div class="clock">9:30<small>to 11:30</small></div>
     <div><h3><svg class="ico" aria-hidden="true"><use href="#i-cap"/></svg>Georgetown University</h3>
       <p class="hook">Office of Undergraduate Admissions, <b>White-Gravenor Hall 103</b>, <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=White-Gravenor+Hall%2C+3700+O+St+NW%2C+Washington+DC+20057" target="_blank" rel="noopener">3700 O St NW</a>. A 45-minute information session with an admissions officer, then a 75-minute student-led tour.</p>
-      <div class="pins"><span class="pin lock">Booked</span><span class="pin v">Class of 2028</span><span class="pin">Arrive 9:15</span></div>
+      <div class="pins"><span class="pin lock">Booked</span><span class="pin v">Class of 2028</span><span class="pin">Arrive 9:15</span><span class="pin hot">75 min of it is outdoors &middot; water + hats</span></div>
       <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=White-Gravenor+Hall%2C+3700+O+St+NW%2C+Washington%2C+DC" target="_blank" rel="noopener">White-Gravenor Hall</a>
       <details open><summary><b>The question worth asking</b> that most families miss</summary>
         <div class="dbody">
@@ -1151,7 +1190,7 @@
         </div></details>
     </div></div>
 
-  <div class="hop"><div class="clock">13:25</div><div class="mv"><svg class="ico" aria-hidden="true"><use href="#i-train"/></svg>Wharf to the Spy Museum &middot; 12 min walk or a 5 min Uber</div></div>
+  <div class="hop"><div class="clock">13:25</div><div class="mv"><svg class="ico" aria-hidden="true"><use href="#i-train"/></svg>Uber, Wharf to the Spy Museum &middot; 5 min &middot; ~$9 &middot; <b>do not walk this at 1:30</b></div></div>
 
   <div class="slot"><div class="clock">14:00<small>to 16:30</small></div>
     <div><h3><svg class="ico" aria-hidden="true"><use href="#i-eye"/></svg>International Spy Museum</h3>
@@ -1171,7 +1210,19 @@
   <div class="slot"><div class="clock">18:30<small>to 20:00</small></div>
     <div><h3><svg class="ico" aria-hidden="true"><use href="#i-eye"/></svg>Embassy Row, with a former CIA officer</h3>
       <p class="hook">Ninety minutes up Massachusetts Avenue with someone who worked the trade. Dead drops, surveillance detection routes, the actual buildings where actual things happened.</p>
-      <div class="pins"><span class="pin r">Ryan</span><span class="pin v">Violet</span><span class="pin hot">Price on request — phone them</span></div>
+      <div class="pins"><span class="pin hot">Not booked yet</span><span class="pin r">Ryan</span><span class="pin v">Violet</span><span class="pin">Ask for 18:30</span></div>
+      <details open><summary><b>Call them tomorrow</b> — and what to ask for</summary>
+        <div class="dbody">
+          <p><b><a href="https://spyher.co/tours/" target="_blank" rel="noopener">spyher.co</a></b> — phone rather than the form; they don't publish prices or a live calendar, and Saturday is three days out.</p>
+          <p><b>Ask for three things:</b> Saturday 8 August, <b>an 18:30 start rather than 17:30</b> (that hour is what makes the afternoon survivable), and whether the guide that day is actually a former case officer — that is the entire reason to pay for this rather than walk Massachusetts Avenue yourselves.</p>
+          <p><b>Decide by Friday.</b> If it isn't confirmed by then, drop it and take the alternative below — Saturday is already a full day and an unresolved booking hanging over it is worse than not having it.</p>
+        </div></details>
+      <details><summary><b>If it doesn't happen</b> — the evening that replaces it</summary>
+        <div class="dbody">
+          <p><b>Kennedy Center rooftop terrace.</b> Free, open to anyone, and the best sunset view in Washington — the Potomac, Georgetown, the Lincoln and the Monument in one sweep. There is usually a free 18:00 performance on the Millennium Stage downstairs, no ticket needed.</p>
+          <p>It is outdoors but it is a terrace, not a walk, and at that hour it is pleasant. Twenty minutes by car from the hotel, and it puts you back for a 20:00 dinner rather than 20:30.</p>
+          <p><b>Or simply stop.</b> Saturday already has a campus tour, a river crossing and three hours of tradecraft in it. An early dinner at Cafe Riggs and a proper night's sleep before a travel day is not a failure.</p>
+        </div></details>
       <details><summary>If it's booked, or Saturday has been long enough</summary>
         <div class="dbody"><p><b>Kennedy Center rooftop terrace.</b> Free, open to anyone, and the best sunset view in Washington — Potomac, Georgetown, the Lincoln and the Monument in one sweep. Usually a free 18:00 performance on the Millennium Stage downstairs.</p></div></details>
     </div></div>
