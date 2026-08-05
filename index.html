@@ -307,6 +307,12 @@
   .refbox[open]>summary::before{content:"\2212"}
   .refbox>summary small{font-family:var(--mono);font-size:10px;letter-spacing:.14em;
     text-transform:uppercase;color:var(--faint);margin-left:auto;font-weight:400}
+  .wear{border:1px solid var(--red);border-left-width:4px;border-radius:2px;background:var(--panel);
+    padding:13px 15px;margin:16px 0 4px;display:flex;gap:12px;align-items:flex-start}
+  .wear .ico{color:var(--red);width:19px;height:19px;margin-top:2px}
+  .wear b{color:var(--red);font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;
+    text-transform:uppercase;display:block;margin-bottom:4px}
+  .wear p{margin:0;font-size:14px;color:var(--ink);line-height:1.45}
   .mapl{display:inline-flex;align-items:center;gap:5px;font-family:var(--mono);font-size:9.5px;
     letter-spacing:.1em;text-transform:uppercase;color:var(--blue);text-decoration:none;
     border:1px solid var(--rule);border-radius:100px;padding:3px 9px;margin-top:9px;white-space:nowrap}
@@ -428,18 +434,16 @@
     <li><a href="#dress"><svg class="ico" aria-hidden="true"><use href="#i-bag"/></svg>What to wear</a></li>
     <li><a href="#book"><svg class="ico" aria-hidden="true"><use href="#i-ticket"/></svg>Book</a></li>
     <li><a href="#hearings"><svg class="ico" aria-hidden="true"><use href="#i-gavel"/></svg>Hearings</a></li>
-    <li><a href="#wx"><svg class="ico" aria-hidden="true"><use href="#i-sun"/></svg>Heat</a></li>
-    <li><a href="#move"><svg class="ico" aria-hidden="true"><use href="#i-train"/></svg>Getting around</a></li>
+    <li><a href="#wx"><svg class="ico" aria-hidden="true"><use href="#i-sun"/></svg>Heat &amp; transit</a></li>
     <li><a href="#d1">Wed</a></li><li><a href="#d2">Thu</a></li>
     <li><a href="#d3">Fri</a></li><li><a href="#d4">Sat</a></li><li><a href="#d5">Sun</a></li>
     <li><a href="#floor"><svg class="ico" aria-hidden="true"><use href="#i-dome"/></svg>Floor briefing</a></li>
-    <li><a href="#violet"><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg>For Violet</a></li>
     <li><a href="#fine">Fine print</a></li>
   </ul>
 </nav>
 
 <section id="citymapwrap" style="padding-top:44px">
-  <details class="refbox"><summary>The map<small>All stops, to scale</small></summary>
+  <details class="refbox" open><summary>The map<small>All stops, to scale</small></summary>
 
   <figure id="citymap">
     <div class="map">
@@ -757,7 +761,7 @@
 
 <!-- ===== WEATHER ===== -->
 <section id="wx">
-  <details class="refbox"><summary>The heat<small>Forecast &middot; heat clock</small></summary>
+  <details class="refbox"><summary>Heat &amp; getting around<small>Forecast &middot; heat clock &middot; Metro vs Uber</small></summary>
   
   <div class="wx">
     <div><span class="wd">Wed 5</span><div class="deg cool">87&deg;</div><div class="sky">Rain, clearing &middot; 75% humidity</div>
@@ -847,12 +851,9 @@
       <p><b>Rule for the whole trip:</b> nothing outdoors between 11:30 and 16:00 longer than the ten minutes it takes to walk between two buildings.</p>
     </div>
   </details>
-  </details>
-</section>
+  
+<h3 style="font-family:var(--display);font-size:22px;margin:34px 0 0">Getting around</h3>
 
-<!-- ===== TRANSPORT ===== -->
-<section id="move">
-  <details class="refbox"><summary>Getting around<small>Metro vs Uber &middot; surge</small></summary>
   
   <p class="lede">Uber is the default and it's the right one. But Metro <b>beats it outright</b> on the Hill, and Georgetown is the one place it can't help you at all.</p>
 
@@ -883,8 +884,12 @@
       <p><b>Water</b> — every Smithsonian has bottle fillers; fill on the way <em>out</em>. <b>Umbrellas</b> — small folding ones only; a golf umbrella won't clear Capitol security.</p>
     </div>
   </details>
+  
   </details>
 </section>
+
+<!-- ===== TRANSPORT ===== -->
+
 
 <!-- ===== DAY 1 ===== -->
 <article class="day d1" id="d1" data-date="2026-08-05">
@@ -978,6 +983,12 @@
     <summary class="dayhead"><span class="kicker"><svg class="ico" aria-hidden="true"><use href="#i-dome"/></svg>Thursday 6 August &middot; Mary's day, part two</span>
     <h2>The Machine Running</h2>
     <p class="tagline">A staff-led tour, a live floor, and a shutdown bill in motion.</p></summary>
+
+      <div class="wear">
+      <svg class="ico" aria-hidden="true"><use href="#i-bag"/></svg>
+      <div><b>Dress code today &middot; enforced at the chamber door</b>
+      <p><b>No shorts, no tank tops, no hats</b> in the Senate gallery — hats, sunglasses and outerwear come off before you enter. Long trousers and a collared shirt clears it, and the same outfit carries you through the committee room, the Capitol tour and dinner at the Monocle. <b>Dress once for the whole day.</b> Take a light layer; every building is aggressively air-conditioned.</p></div>
+    </div>
 
   <div class="flag good">
     <span class="kicker"><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg>The coincidence nobody could have arranged</span>
@@ -1228,6 +1239,12 @@
     <summary class="dayhead"><span class="kicker"><svg class="ico" aria-hidden="true"><use href="#i-cap"/></svg>Saturday 8 August &middot; Violet's day, twice over</span>
     <h2>Her Future, Then Spies</h2>
     <p class="tagline">A campus at nine. A cover identity at half one.</p></summary>
+
+      <div class="wear">
+      <svg class="ico" aria-hidden="true"><use href="#i-bag"/></svg>
+      <div><b>What to wear today</b>
+      <p>Trainers, hat and water for the campus tour — <b>75 minutes of it is outdoors</b>. Then something a notch smarter for Cafe Riggs at 20:30; it is a grand bank hall and the room repays it. Bring the change with you or build in a stop at the hotel.</p></div>
+    </div>
 
   <div class="flag good">
     <span class="kicker"><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg>The cleanest day of the four</span>
@@ -1512,30 +1529,11 @@
 </section>
 
 <!-- ===== VIOLET ===== -->
-<section id="violet">
-  <details class="refbox"><summary>Best for Violet<small>Museum ranking</small></summary>
-  
-  <p class="lede">Short answer: <b>not Natural History.</b> Two world-class objects, and otherwise the most stroller-dense building on the Mall in August. Honest ranking, best first.</p>
 
-  <details open><summary><b>1. Spy Museum</b> &middot; <b>2. Planet Word</b> &middot; <b>3. National Gallery light tunnel</b> — all three already in the plan</summary>
-    <div class="dbody">
-      <p><b>Spy Museum</b> is the one teenagers consistently rank first. Saturday 13:30.</p>
-      <p><b>Planet Word</b> is the sleeper — free, voice-activated, a room where you deliver a famous speech off a teleprompter, and almost nobody has it on their list. Wednesday 15:30.</p>
-      <p><b>Multiverse</b> at the National Gallery — 41,000 LEDs over 200 feet, never repeating. Thursday 14:00.</p>
-    </div></details>
-
-  <details><summary><b>4. American History</b> &middot; <b>5. Hirshhorn</b> &middot; <b>6. Natural History</b> — the substitutes, if a plan slips</summary>
-    <div class="dbody">
-      <p><b>American History</b> — ruby slippers, Julia Child's kitchen, the Greensboro lunch counter, the Star-Spangled Banner in its own dark chamber. Ninety good minutes, no ticket.</p>
-      <p><b>Hirshhorn</b> — a concrete doughnut of contemporary art, the most photogenic Smithsonian interior after the Kogod Courtyard. An hour is plenty.</p>
-      <p><b>Natural History</b> <span class="stamp">Done Wednesday</span> — and it delivered. Gems, meteorites, human origins, mammals, the African hall. Cruising the whole building beat curating a shortlist.</p>
-    </div></details>
-  </details>
-</section>
 
 <!-- ===== FINE PRINT ===== -->
 <section id="fine">
-  <details class="refbox"><summary>Fine print<small>Money &middot; fallbacks &middot; gaps</small></summary>
+  <details class="refbox"><summary>Fine print<small>Money &middot; fallbacks &middot; backups &middot; gaps</small></summary>
   
 
   <details><summary><b>What this costs</b>, three people, four days</summary>
@@ -1575,6 +1573,26 @@
     </svg>
     <p>Researched 29 July and 3 August 2026 &middot; Senate and House 2026 calendars, congress.gov, senate.gov, visit.archives.gov, loc.gov, supremecourt.gov, airandspace.si.edu, spymuseum.org, planetwordmuseum.org, nga.gov, uadmissions.georgetown.edu, spyher.co, weather.gov</p>
   </footer>
+  
+<h3 style="font-family:var(--display);font-size:22px;margin:34px 0 0">If a plan slips &mdash; backup museums</h3>
+
+  
+  <p class="lede">Short answer: <b>not Natural History.</b> Two world-class objects, and otherwise the most stroller-dense building on the Mall in August. Honest ranking, best first.</p>
+
+  <details open><summary><b>1. Spy Museum</b> &middot; <b>2. Planet Word</b> &middot; <b>3. National Gallery light tunnel</b> — all three already in the plan</summary>
+    <div class="dbody">
+      <p><b>Spy Museum</b> is the one teenagers consistently rank first. Saturday 13:30.</p>
+      <p><b>Planet Word</b> is the sleeper — free, voice-activated, a room where you deliver a famous speech off a teleprompter, and almost nobody has it on their list. Wednesday 15:30.</p>
+      <p><b>Multiverse</b> at the National Gallery — 41,000 LEDs over 200 feet, never repeating. Thursday 14:00.</p>
+    </div></details>
+
+  <details><summary><b>4. American History</b> &middot; <b>5. Hirshhorn</b> &middot; <b>6. Natural History</b> — the substitutes, if a plan slips</summary>
+    <div class="dbody">
+      <p><b>American History</b> — ruby slippers, Julia Child's kitchen, the Greensboro lunch counter, the Star-Spangled Banner in its own dark chamber. Ninety good minutes, no ticket.</p>
+      <p><b>Hirshhorn</b> — a concrete doughnut of contemporary art, the most photogenic Smithsonian interior after the Kogod Courtyard. An hour is plenty.</p>
+      <p><b>Natural History</b> <span class="stamp">Done Wednesday</span> — and it delivered. Gems, meteorites, human origins, mammals, the African hall. Cruising the whole building beat curating a shortlist.</p>
+    </div></details>
+  
   </details>
 </section>
 
@@ -1589,9 +1607,9 @@
     var box=d.querySelector('.daybox'), h=d.querySelector('.dayhead h2');
     if(d.dataset.date<today){ d.classList.add('past'); box.open=false;
       if(h&&!h.querySelector('.stamp')) h.insertAdjacentHTML('beforeend',' <span class="stamp">Done</span>');
-    } else if(d.dataset.date===today){ box.open=true; cur=d;
-      if(h) h.insertAdjacentHTML('beforeend',' <span class="todaypill">Today</span>');
-    } else { box.open=false; }
+    } else { box.open=true;
+      if(d.dataset.date===today){ cur=d; if(h) h.insertAdjacentHTML('beforeend',' <span class="todaypill">Today</span>'); }
+    }
   });
   if(cur&&!location.hash){ setTimeout(function(){ cur.scrollIntoView({block:'start'}); },60); }
 })();
