@@ -285,6 +285,28 @@
   .hclock b{font-family:var(--display);font-size:17px;display:block;margin:5px 0 3px}
   .hclock i{font-style:normal;font-size:12px;color:var(--soft);line-height:1.35;display:block}
   .hclock .ok{color:var(--blue)} .hclock .mid{color:var(--gold)} .hclock .bad{color:var(--red)}
+  .daybox>summary{list-style:none;cursor:pointer;position:relative}
+  .daybox>summary::-webkit-details-marker{display:none}
+  .daybox>summary::after{content:"COLLAPSE";position:absolute;right:0;top:20px;font-family:var(--mono);
+    font-size:9px;letter-spacing:.14em;color:var(--faint);border:1px solid var(--rule);
+    border-radius:100px;padding:3px 9px}
+  .daybox:not([open])>summary::after{content:"OPEN"}
+  .daybox:not([open])>summary{opacity:.62}
+  .day.past .daybox:not([open])>summary{opacity:.42}
+  .day.past .dayhead h2{font-size:clamp(22px,4vw,30px)}
+  .daybox>summary:hover{opacity:1}
+  .todaypill{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;
+    background:var(--red);color:var(--parch);border-radius:100px;padding:3px 9px;margin-left:9px;
+    display:inline-block;vertical-align:3px}
+  .refbox{border-top:3px double var(--rule);margin-top:34px}
+  .refbox>summary{list-style:none;cursor:pointer;padding:16px 0;display:flex;align-items:center;gap:12px;
+    font-family:var(--display);font-size:clamp(22px,4vw,30px);color:var(--ink)}
+  .refbox>summary::-webkit-details-marker{display:none}
+  .refbox>summary::before{content:"+";font-family:var(--mono);font-size:20px;color:var(--red);
+    width:18px;flex:none;font-weight:700}
+  .refbox[open]>summary::before{content:"\2212"}
+  .refbox>summary small{font-family:var(--mono);font-size:10px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--faint);margin-left:auto;font-weight:400}
   .mapl{display:inline-flex;align-items:center;gap:5px;font-family:var(--mono);font-size:9.5px;
     letter-spacing:.1em;text-transform:uppercase;color:var(--blue);text-decoration:none;
     border:1px solid var(--rule);border-radius:100px;padding:3px 9px;margin-top:9px;white-space:nowrap}
@@ -417,6 +439,8 @@
 </nav>
 
 <section id="citymapwrap" style="padding-top:44px">
+  <details class="refbox"><summary>The map<small>All stops, to scale</small></summary>
+
   <figure id="citymap">
     <div class="map">
       <svg viewBox="35 25 700 445" role="img" aria-label="Map of central Washington DC plotted to scale, with numbered stops keyed to the list below.">
@@ -521,6 +545,7 @@
     </div>
     <figcaption>Plotted to scale from real coordinates &middot; grey dots are landmarks you pass, not stops</figcaption>
   </figure>
+  </details>
 </section>
 
 <section id="base">
@@ -566,8 +591,8 @@
 </section>
 
 <section id="dress">
-  <div class="shead"><h2><svg class="ico" aria-hidden="true"><use href="#i-bag"/></svg>What to wear</h2>
-    <span class="kicker">Only where it deviates from normal</span></div>
+  <details class="refbox"><summary>What to wear<small>Only where it deviates</small></summary>
+  
   <p class="lede">Most of this trip is shorts-and-trainers territory. Three places are not, and one of them has a rule enforced at the door.</p>
 
   <div class="scroll">
@@ -597,12 +622,13 @@
     <p><b>Dress for the Senate gallery and wear it all day.</b> Long trousers and a collared shirt, closed shoes, no hat — that clears the chamber door, looks right in a committee room, works for the Capitol tour and the Library, and carries you into dinner at the Monocle without changing. It is one outfit for the whole day and the only day this trip that needs one.</p>
     <p>Carry a light layer regardless: every one of those buildings is aggressively air-conditioned, and you will go from 92&deg;F outside to shivering inside within a minute.</p>
   </div>
+  </details>
 </section>
 
 <!-- ===== HEARINGS ===== -->
 <section id="hearings">
-  <div class="shead"><h2><svg class="ico" aria-hidden="true"><use href="#i-gavel"/></svg>Committee hearings</h2>
-    <span class="kicker">Posted schedule &middot; checked Mon 3 Aug</span></div>
+  <details class="refbox"><summary>Committee hearings<small>Wed + Thu schedule &middot; room numbers</small></summary>
+  
   <p class="lede">Committee is where legislation is written. The floor is where it gets announced. <b>Every one of these is open to the public and free to walk into</b> — no pass, no host, no reservation. Clear building security and sit down.</p>
 
   <div class="flag">
@@ -678,12 +704,13 @@
       <p>Public seating is first-come and rows fill for anything newsworthy. <b>Arrive fifteen minutes early and sit at the back</b> so you can leave quietly when you've had enough — nobody minds, people come and go throughout.</p>
     </div>
   </details>
+  </details>
 </section>
 
 <!-- ===== BOOK ===== -->
 <section id="book">
-  <div class="shead"><h2><svg class="ico" aria-hidden="true"><use href="#i-ticket"/></svg>Book now</h2>
-    <span class="kicker">Two days out</span></div>
+  <details class="refbox"><summary>Book now<small>What is still open</small></summary>
+  
   <div class="scroll">
     <table>
       <thead><tr><th class="n"></th><th>What</th><th>For</th><th>Cost</th><th></th></tr></thead>
@@ -725,12 +752,13 @@
       <p><b>Washington Monument.</b> The 30-day window closed months ago. One shot remains: a day-before drop at <b>3:00 pm sharp</b> on <a href="https://www.recreation.gov/ticket/234635/ticket/1050" target="_blank" rel="noopener">recreation.gov</a>. Set an alarm for 2:58. Treat it as a lottery.</p>
     </div>
   </details>
+  </details>
 </section>
 
 <!-- ===== WEATHER ===== -->
 <section id="wx">
-  <div class="shead"><h2><svg class="ico" aria-hidden="true"><use href="#i-sun"/></svg>The heat</h2>
-    <span class="kicker">Forecast checked Mon 3 Aug</span></div>
+  <details class="refbox"><summary>The heat<small>Forecast &middot; heat clock</small></summary>
+  
   <div class="wx">
     <div><span class="wd">Wed 5</span><div class="deg cool">87&deg;</div><div class="sky">Rain, clearing &middot; 75% humidity</div>
       <div class="hit"><b>Wet morning, better afternoon.</b> 45% at 10am, 20% by 1pm, 15% by 7pm.</div></div>
@@ -819,12 +847,13 @@
       <p><b>Rule for the whole trip:</b> nothing outdoors between 11:30 and 16:00 longer than the ten minutes it takes to walk between two buildings.</p>
     </div>
   </details>
+  </details>
 </section>
 
 <!-- ===== TRANSPORT ===== -->
 <section id="move">
-  <div class="shead"><h2><svg class="ico" aria-hidden="true"><use href="#i-train"/></svg>Getting around</h2>
-    <span class="kicker">No car</span></div>
+  <details class="refbox"><summary>Getting around<small>Metro vs Uber &middot; surge</small></summary>
+  
   <p class="lede">Uber is the default and it's the right one. But Metro <b>beats it outright</b> on the Hill, and Georgetown is the one place it can't help you at all.</p>
 
   <div class="cards">
@@ -854,13 +883,15 @@
       <p><b>Water</b> — every Smithsonian has bottle fillers; fill on the way <em>out</em>. <b>Umbrellas</b> — small folding ones only; a golf umbrella won't clear Capitol security.</p>
     </div>
   </details>
+  </details>
 </section>
 
 <!-- ===== DAY 1 ===== -->
-<article class="day d1" id="d1">
-  <div class="dayhead"><span class="kicker"><svg class="ico" aria-hidden="true"><use href="#i-quill"/></svg>Wednesday 5 August &middot; Mary’s day</span>
+<article class="day d1" id="d1" data-date="2026-08-05">
+  <details class="daybox" open>
+    <summary class="dayhead"><span class="kicker"><svg class="ico" aria-hidden="true"><use href="#i-quill"/></svg>Wednesday 5 August &middot; Mary’s day</span>
     <h2>Founding Documents</h2>
-    <p class="tagline">A committee writing the next one. <span class="stamp">Day done</span></p></div>
+    <p class="tagline">A committee writing the next one. <span class="stamp">Day done</span></p></summary>
 
   <div class="slot"><div class="clock">9:00<small>leave</small></div>
     <div><h3><svg class="ico" aria-hidden="true"><use href="#i-dome"/></svg>Russell Senate Office Building</h3>
@@ -938,13 +969,15 @@
         <p><b>Dinner service ends at 21:15</b>, so 20:15 gives you an hour. Order the chaat and mains together rather than in courses.</p>
       </div></details>
   </div>
+  </details>
 </article>
 
 <!-- ===== DAY 2 ===== -->
-<article class="day d2" id="d2">
-  <div class="dayhead"><span class="kicker"><svg class="ico" aria-hidden="true"><use href="#i-dome"/></svg>Thursday 6 August &middot; Mary's day, part two</span>
+<article class="day d2" id="d2" data-date="2026-08-06">
+  <details class="daybox" open>
+    <summary class="dayhead"><span class="kicker"><svg class="ico" aria-hidden="true"><use href="#i-dome"/></svg>Thursday 6 August &middot; Mary's day, part two</span>
     <h2>The Machine Running</h2>
-    <p class="tagline">A staff-led tour, a live floor, and a shutdown bill in motion.</p></div>
+    <p class="tagline">A staff-led tour, a live floor, and a shutdown bill in motion.</p></summary>
 
   <div class="flag good">
     <span class="kicker"><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg>The coincidence nobody could have arranged</span>
@@ -1091,13 +1124,15 @@
         <p><b>St. Anselm</b>, near Union Market — warm, handsome, live fire, and about as far from a marble corridor as this city gets.</p>
       </div></details>
   </div>
+  </details>
 </article>
 
 <!-- ===== DAY 3 ===== -->
-<article class="day d3" id="d3">
-  <div class="dayhead"><span class="kicker"><svg class="ico" aria-hidden="true"><use href="#i-rocket"/></svg>Friday 7 August &middot; Ryan's day</span>
+<article class="day d3" id="d3" data-date="2026-08-07">
+  <details class="daybox" open>
+    <summary class="dayhead"><span class="kicker"><svg class="ico" aria-hidden="true"><use href="#i-rocket"/></svg>Friday 7 August &middot; Ryan's day</span>
     <h2>Flight, then Marble</h2>
-    <p class="tagline">Museum through the worst heat. Monuments after dark, when they're empty.</p></div>
+    <p class="tagline">Museum through the worst heat. Monuments after dark, when they're empty.</p></summary>
 
   <div class="slot"><div class="clock">10:00<small>to 14:15</small></div>
     <div><h3><svg class="ico" aria-hidden="true"><use href="#i-rocket"/></svg>Air &amp; Space</h3>
@@ -1184,13 +1219,15 @@
         <p><b>Del Mar</b> — Spanish coastal, the grandest dining room on the Wharf.</p>
       </div></details>
   </div>
+  </details>
 </article>
 
 <!-- ===== DAY 4 ===== -->
-<article class="day d4" id="d4">
-  <div class="dayhead"><span class="kicker"><svg class="ico" aria-hidden="true"><use href="#i-cap"/></svg>Saturday 8 August &middot; Violet's day, twice over</span>
+<article class="day d4" id="d4" data-date="2026-08-08">
+  <details class="daybox" open>
+    <summary class="dayhead"><span class="kicker"><svg class="ico" aria-hidden="true"><use href="#i-cap"/></svg>Saturday 8 August &middot; Violet's day, twice over</span>
     <h2>Her Future, Then Spies</h2>
-    <p class="tagline">A campus at nine. A cover identity at half one.</p></div>
+    <p class="tagline">A campus at nine. A cover identity at half one.</p></summary>
 
   <div class="flag good">
     <span class="kicker"><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg>The cleanest day of the four</span>
@@ -1310,13 +1347,15 @@
         <p><b>The Hamilton</b> — big, easy, late. <b>The Watergate</b> — drinks only, to end on modern political history.</p>
       </div></details>
   </div>
+  </details>
 </article>
 
 <!-- ===== DAY 5 ===== -->
-<article class="day d5" id="d5">
-  <div class="dayhead"><span class="kicker"><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg>Sunday 9 August &middot; the bonus half-day</span>
+<article class="day d5" id="d5" data-date="2026-08-09">
+  <details class="daybox" open>
+    <summary class="dayhead"><span class="kicker"><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg>Sunday 9 August &middot; the bonus half-day</span>
     <h2>Market, Then Home</h2>
-    <p class="tagline">Nothing booked, nothing owed. Wheels up at five.</p></div>
+    <p class="tagline">Nothing booked, nothing owed. Wheels up at five.</p></summary>
 
   <div class="flag good">
     <span class="kicker"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg>You have until 2:30 pm</span>
@@ -1430,12 +1469,13 @@
       </div></details>
   </div>
 
+  </details>
 </article>
 
 <!-- ===== FLOOR ===== -->
 <section id="floor">
-  <div class="shead"><h2><svg class="ico" aria-hidden="true"><use href="#i-dome"/></svg>Floor briefing</h2>
-    <span class="kicker">Mary &middot; researched Mon 3 Aug</span></div>
+  <details class="refbox"><summary>Floor briefing<small>The CR &middot; what to watch for</small></summary>
+  
   <p class="lede">Enough to follow a government funding fight in real time, from the gallery.</p>
 
   <details><summary><b>The bill</b> — a continuing resolution through December 11, and why it's technically an Africa trade bill</summary>
@@ -1468,12 +1508,13 @@
       <p><a href="https://www.congress.gov/on-senate-floor-today" target="_blank" rel="noopener">congress.gov/on-senate-floor-today</a> &middot; <a href="https://www.democrats.senate.gov/floor/senate-schedule" target="_blank" rel="noopener">democrats.senate.gov/floor/senate-schedule</a> &middot; <a href="https://www.senate.gov/committees/hearings_meetings.htm" target="_blank" rel="noopener">senate.gov committee schedule</a>.</p>
       <p><b>Fair warning:</b> researched Monday. A funding fight two days from recess moves hourly — the CR could clear Wednesday and leave Thursday quiet, or slip and dominate it.</p>
     </div></details>
+  </details>
 </section>
 
 <!-- ===== VIOLET ===== -->
 <section id="violet">
-  <div class="shead"><h2><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg>Best for Violet</h2>
-    <span class="kicker">You asked directly</span></div>
+  <details class="refbox"><summary>Best for Violet<small>Museum ranking</small></summary>
+  
   <p class="lede">Short answer: <b>not Natural History.</b> Two world-class objects, and otherwise the most stroller-dense building on the Mall in August. Honest ranking, best first.</p>
 
   <details open><summary><b>1. Spy Museum</b> &middot; <b>2. Planet Word</b> &middot; <b>3. National Gallery light tunnel</b> — all three already in the plan</summary>
@@ -1489,11 +1530,13 @@
       <p><b>Hirshhorn</b> — a concrete doughnut of contemporary art, the most photogenic Smithsonian interior after the Kogod Courtyard. An hour is plenty.</p>
       <p><b>Natural History</b> <span class="stamp">Done Wednesday</span> — and it delivered. Gems, meteorites, human origins, mammals, the African hall. Cruising the whole building beat curating a shortlist.</p>
     </div></details>
+  </details>
 </section>
 
 <!-- ===== FINE PRINT ===== -->
 <section id="fine">
-  <div class="shead"><h2>Fine print</h2><span class="kicker">Money, fallbacks, gaps</span></div>
+  <details class="refbox"><summary>Fine print<small>Money &middot; fallbacks &middot; gaps</small></summary>
+  
 
   <details><summary><b>What this costs</b>, three people, four days</summary>
     <div class="dbody"><ul>
@@ -1532,8 +1575,26 @@
     </svg>
     <p>Researched 29 July and 3 August 2026 &middot; Senate and House 2026 calendars, congress.gov, senate.gov, visit.archives.gov, loc.gov, supremecourt.gov, airandspace.si.edu, spymuseum.org, planetwordmuseum.org, nga.gov, uadmissions.georgetown.edu, spyher.co, weather.gov</p>
   </footer>
+  </details>
 </section>
 
 </div>
+
+<script>
+(function(){
+  var t=new Date(), p=n=>String(n).padStart(2,'0');
+  var today=t.getFullYear()+'-'+p(t.getMonth()+1)+'-'+p(t.getDate());
+  var days=document.querySelectorAll('article.day[data-date]'), cur=null;
+  days.forEach(function(d){
+    var box=d.querySelector('.daybox'), h=d.querySelector('.dayhead h2');
+    if(d.dataset.date<today){ d.classList.add('past'); box.open=false;
+      if(h&&!h.querySelector('.stamp')) h.insertAdjacentHTML('beforeend',' <span class="stamp">Done</span>');
+    } else if(d.dataset.date===today){ box.open=true; cur=d;
+      if(h) h.insertAdjacentHTML('beforeend',' <span class="todaypill">Today</span>');
+    } else { box.open=false; }
+  });
+  if(cur&&!location.hash){ setTimeout(function(){ cur.scrollIntoView({block:'start'}); },60); }
+})();
+</script>
 </body>
 </html>
