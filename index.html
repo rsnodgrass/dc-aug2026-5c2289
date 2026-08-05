@@ -262,6 +262,21 @@
   .mkey ol{margin:0;padding-left:19px;font-size:12.5px;color:var(--soft);line-height:1.65}
   .mkey li{padding-left:2px}
   .mkey li::marker{font-family:var(--mono);font-size:10.5px;color:var(--faint)}
+  .rmeta{font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--faint);
+    margin-top:5px;display:flex;flex-wrap:wrap;gap:4px 10px}
+  .rmeta b{color:var(--ink);font-weight:600}
+  .rlinks{display:flex;flex-wrap:wrap;gap:6px;margin-top:11px}
+  .rl{display:inline-flex;align-items:center;gap:5px;font-family:var(--mono);font-size:10px;
+    letter-spacing:.1em;text-transform:uppercase;padding:5px 10px;border-radius:100px;
+    text-decoration:none;white-space:nowrap;border:1px solid var(--rule);color:var(--soft)}
+  .rl.book{border-color:var(--gold);color:var(--gold)}
+  .rl.book:hover{background:var(--gold);color:var(--parch)}
+  .rl:hover{border-color:var(--ink);color:var(--ink)}
+  .done{opacity:.62}
+  .done .eat,.done .slot{filter:saturate(.5)}
+  .stamp{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--blue);border:1px solid var(--blue);border-radius:100px;padding:3px 9px;
+    display:inline-block;vertical-align:2px;margin-left:8px}
   .mapl{display:inline-flex;align-items:center;gap:5px;font-family:var(--mono);font-size:9.5px;
     letter-spacing:.1em;text-transform:uppercase;color:var(--blue);text-decoration:none;
     border:1px solid var(--rule);border-radius:100px;padding:3px 9px;margin-top:9px;white-space:nowrap}
@@ -350,7 +365,7 @@
 
 <div class="grid4">
   <a class="dcard c1" href="#d1"><span class="dnum"><svg class="ico" aria-hidden="true"><use href="#i-quill"/></svg>Wed &middot; Day 1</span>
-    <h3>Founding Documents</h3><p>A live AI markup, the Declaration, Georgetown at golden hour.</p>
+    <h3>Founding Documents</h3><p>The AI markup, the Declaration, Natural History, Georgetown.</p>
     <span class="temp">84&deg; &middot; storms</span></a>
   <a class="dcard c2" href="#d2"><span class="dnum"><svg class="ico" aria-hidden="true"><use href="#i-dome"/></svg>Thu &middot; Day 2</span>
     <h3>The Machine Running</h3><p>Staff-led Capitol tour. A live floor. A shutdown bill.</p>
@@ -442,11 +457,11 @@
 
         <!-- context, unlabelled but present -->
         <g fill="var(--faint)" opacity=".55">
-          <circle cx="392" cy="200" r="3.2"/><circle cx="402" cy="295" r="3.2"/>
+          <circle cx="402" cy="295" r="3.2"/>
           <circle cx="513" cy="200" r="3.2"/><circle cx="392" cy="389" r="3.2"/>
           <circle cx="661" cy="200" r="3.2"/>
         </g>
-        <text class="ms" x="336" y="196">WHITE HOUSE</text>
+        
         <text class="ms" x="380" y="279">MONUMENT</text>
         <text class="ms" x="522" y="197">PORTRAIT GALL.</text>
         <text class="ms" x="402" y="392">JEFFERSON</text>
@@ -662,7 +677,7 @@
     <summary><b>Already asked and answered</b> — what's impossible, and why</summary>
     <div class="dbody">
       <p><b>Pentagon.</b> Weekdays only, so Saturday was never on — and reservations close 14 days out, a window that shut before you asked.</p>
-      <p><b>White House.</b> Congressional request, minimum 21 days. Lafayette Square and the north front from the fence is the whole of it.</p>
+      <p><b>White House.</b> Off the list entirely — it is fenced and screened in black construction hoarding, so there is nothing to see even from the street. Confirmed in person.</p>
       <p><b>Treasury.</b> The most exclusive tour in town, Saturdays by congressional request — but the <b>first and third</b> Saturdays. Aug 1 and 15 qualify; Aug 8 does not.</p>
       <p><b>Washington Monument.</b> The 30-day window closed months ago. One shot remains: a day-before drop at <b>3:00 pm sharp</b> on <a href="https://www.recreation.gov/ticket/234635/ticket/1050" target="_blank" rel="noopener">recreation.gov</a>. Set an alarm for 2:58. Treat it as a lottery.</p>
     </div>
@@ -771,7 +786,7 @@
 <article class="day d1" id="d1">
   <div class="dayhead"><span class="kicker"><svg class="ico" aria-hidden="true"><use href="#i-quill"/></svg>Wednesday 5 August &middot; Mary’s day</span>
     <h2>Founding Documents</h2>
-    <p class="tagline">Paper that made a country — and a committee writing the next one.</p></div>
+    <p class="tagline">A committee writing the next one. <span class="stamp">Day done</span></p></div>
 
   <div class="slot"><div class="clock">9:00<small>leave</small></div>
     <div><h3><svg class="ico" aria-hidden="true"><use href="#i-dome"/></svg>Russell Senate Office Building</h3>
@@ -781,7 +796,7 @@
 
   <div class="slot"><div class="clock">10:00<small>to 11:05</small></div>
     <div><h3><svg class="ico" aria-hidden="true"><use href="#i-gavel"/></svg>Commerce markup &middot; <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Russell+Senate+Office+Building%2C+Washington+DC" target="_blank" rel="noopener">SR-253</a></h3>
-      <p class="hook">AI chatbot verification, AI-enabled toys, child safety online — marked up in Cantwell's own committee. <b>No pass, no reservation.</b> Walk in, sit at the back. <b>Leave by 11:05</b> — the Archives slot is now timed.</p>
+      <p class="hook">AI chatbot verification, AI-enabled toys, child safety online — marked up in Cantwell's own committee. <b>The best thing on the whole itinerary.</b> Cantwell and Cruz, AI and child-safety bills, a public room anyone can walk into.</p>
       <div class="pins"><span class="pin go">Free &middot; walk in</span><span class="pin m">Mary</span><span class="pin v">Violet</span></div>
       <details><summary>Why a markup beats a hearing, and what you'll actually see</summary>
         <div class="dbody">
@@ -793,7 +808,7 @@
   <div class="hop"><div class="clock">11:05</div><div class="mv"><svg class="ico" aria-hidden="true"><use href="#i-train"/></svg>Uber to the Archives &middot; 12 min &middot; Constitution Ave entrance</div></div>
 
   <div class="slot"><div class="clock">11:30<small>to 13:00</small></div>
-    <div><h3><svg class="ico" aria-hidden="true"><use href="#i-quill"/></svg>National Archives</h3>
+    <div><h3><svg class="ico" aria-hidden="true"><use href="#i-quill"/></svg>National Archives <span class="stamp">Done</span></h3>
       <p class="hook">The Declaration, the Constitution, the Bill of Rights — plus a 250th-anniversary exhibition that didn't exist a year ago.</p>
       <div class="pins"><span class="pin lock">Ticket #464525082</span><span class="pin go">Valid all day</span><span class="pin">701 Constitution Ave NW</span></div>
       <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=National+Archives+Museum%2C+701+Constitution+Ave+NW%2C+Washington%2C+DC" target="_blank" rel="noopener">National Archives Museum</a>
@@ -812,39 +827,25 @@
     </div></div>
 
   <div class="slot"><div class="clock">13:10<small>to 14:15</small></div>
-    <div><h3><svg class="ico" aria-hidden="true"><use href="#i-fork"/></svg>Lunch</h3>
-      <p class="hook"><b>Oyamel</b> or <b>Jaleo</b>, both José Andrés, both three minutes away in Penn Quarter. Small plates in a room with some life to it.</p>
+    <div><h3><svg class="ico" aria-hidden="true"><use href="#i-fork"/></svg>Oyamel <span class="stamp">Done</span></h3>
+      <p class="hook">Perfect. Small plates, a room with life in it, no two-hour commitment. This is now the benchmark for lunch picks on future trips.</p>
       <details><summary>Or keep it simple</summary>
         <div class="dbody"><p>The <b>Courtyard Cafe</b> inside the Portrait Gallery, under the glass canopy — about $15 a head and you're already where the afternoon starts.</p></div></details>
     </div></div>
 
-  <div class="slot"><div class="clock">14:30<small>to 15:15</small></div>
-    <div><h3><svg class="ico" aria-hidden="true"><use href="#i-column"/></svg>Pennsylvania Avenue on foot</h3>
-      <p class="hook">The walk you'd have driven. Archives to the <b>Willard lobby</b> to <b>Lafayette Square</b> and the White House north front — a straight, mostly shaded line.</p>
-      <details><summary>Why the Willard lobby is worth two minutes</summary>
-        <div class="dbody"><p>Gilded, freezing, and the reputed birthplace of the word <b>lobbyist</b> — Grant supposedly escaped the White House to drink there and was ambushed by favour-seekers. The etymology is disputed and the story is probably too good to be true, which is itself a decent lesson. The air conditioning alone justifies it.</p></div></details>
+  <div class="slot"><div class="clock">14:30<small>to 17:15</small></div>
+    <div><h3><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg>Natural History <span class="stamp">Done</span></h3>
+      <p class="hook">Too hot for the Pennsylvania Avenue walk, so you swapped it for air conditioning and cruised the whole building. Gems for Mary and Violet, meteorites for Ryan, human origins, mammals, the African hall.</p>
     </div></div>
 
-  <div class="slot"><div class="clock">15:30<small>to 17:15</small></div>
-    <div><h3><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg>Planet Word</h3>
-      <p class="hook">The day has been Mary's since nine in the morning. This is the swing back — a voice-activated museum in the 1869 Franklin School, and the one place on this list most likely to surprise everybody.</p>
-      <div class="pins"><span class="pin v">Violet</span><span class="pin go">Free &middot; $15 suggested</span><span class="pin">Book a pass</span></div>
-      <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=Planet+Word+Museum%2C+925+13th+St+NW%2C+Washington%2C+DC" target="_blank" rel="noopener">Planet Word</a>
-      <details><summary>What's actually in there</summary>
-        <div class="dbody">
-          <p>A 22-foot <b>talking word wall</b> that responds when you speak to it. A room where you deliver a famous speech off a teleprompter and hear yourself do it. Karaoke. A library where the books answer back when you open them.</p>
-          <p>It is free, rarely crowded, and photographs beautifully — the restored school building is worth the visit on its own.</p>
-        </div></details>
-      <details><summary><b>If you'd rather stay on theme:</b> the National Portrait Gallery instead</summary>
-        <div class="dbody">
-          <p><b>America's Presidents</b> on the second floor is the only complete presidential set outside the White House, and after a morning at the Archives it lands hard. Plus the Great Hall on three and the <b>Kogod Courtyard</b> under its undulating glass roof, which is the best photograph in the building.</p>
-          <p>Free, no ticket, open till 19:00 — so it also works as a bonus stop if Planet Word runs short.</p>
-        </div></details>
+  <div class="slot rest"><div class="clock">17:45<small>to 19:00</small></div>
+    <div><h3><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg>Hotel break <span class="stamp">Done</span></h3>
+      <p class="hook">Everyone overheated and flat. Cool down, then espresso martinis at the hotel bar. The sushi was a mistake.</p>
     </div></div>
 
-  <div class="hop"><div class="clock">17:20</div><div class="mv"><svg class="ico" aria-hidden="true"><use href="#i-train"/></svg>Uber to Georgetown &middot; 15&ndash;20 min &middot; ~$18</div></div>
+  <div class="hop"><div class="clock">19:05</div><div class="mv"><svg class="ico" aria-hidden="true"><use href="#i-train"/></svg>Uber to Georgetown &middot; 15&ndash;20 min &middot; ~$18</div></div>
 
-  <div class="slot"><div class="clock">17:40<small>to 19:15</small></div>
+  <div class="slot"><div class="clock">19:25<small>to 20:45</small></div>
     <div><h3><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg>Georgetown</h3>
       <p class="hook">Downhill from the shops to the water, which is the only sane direction to walk it.</p>
       <details><summary>The route, and the staircase Violet will want</summary>
@@ -854,9 +855,11 @@
         </div></details>
     </div></div>
 
-  <div class="eat"><span class="lbl"><svg class="ico" aria-hidden="true"><use href="#i-fork"/></svg>Dinner &middot; 19:30</span>
+  <div class="eat"><span class="lbl"><svg class="ico" aria-hidden="true"><use href="#i-fork"/></svg>Dinner &middot; 21:00</span>
     <h3>Filomena Ristorante</h3>
-    <p>Grandmothers rolling pasta in the front window, and decor that changes with the season and has never once been described as restrained.</p>
+    <p>Grandmothers rolling pasta in the front window; decor that changes with the season and has never once been called restrained.</p>
+    <div class="rmeta"><span><b>Italian</b></span> <span>$$$</span> <span>4.4&#9733;</span> <span>Georgetown</span></div>
+    <div class="rlinks"><a class="rl book" href="https://www.opentable.com/filomena-ristorante" target="_blank" rel="noopener">Reserve</a><a class="rl " href="https://www.google.com/maps/search/?api=1&query=Filomena+Ristorante%2C+1063+Wisconsin+Ave+NW%2C+Washington+DC" target="_blank" rel="noopener">Map</a><a class="rl " href="https://www.filomena.com/menus" target="_blank" rel="noopener">Menu</a></div>
     <details><summary>Two alternatives</summary>
       <div class="dbody">
         <p><b>Martin's Tavern</b> — 1933, and booth three is where JFK proposed to Jackie.</p>
@@ -983,9 +986,20 @@
         </div></details>
     </div></div>
 
+  <div class="hop"><div class="clock">17:05</div><div class="mv"><svg class="ico" aria-hidden="true"><use href="#i-train"/></svg>Metro back to the hotel &middot; 15 min</div></div>
+
+  <div class="slot rest"><div class="clock">17:25<small>to 18:40</small></div>
+    <div><h3><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg>Hotel break</h3>
+      <p class="hook">Learned from Wednesday: this is not slack, it's required. Eight hours on the Hill in 92&deg;F, then cool down properly before dinner.</p>
+    </div></div>
+
+  <div class="hop"><div class="clock">18:45</div><div class="mv"><svg class="ico" aria-hidden="true"><use href="#i-train"/></svg>Uber back to the Hill &middot; 12 min</div></div>
+
   <div class="eat"><span class="lbl"><svg class="ico" aria-hidden="true"><use href="#i-fork"/></svg>Dinner &middot; 19:00</span>
     <h3>The Monocle</h3>
-    <p>The Senate's own restaurant since 1960, a block from Russell, walls papered in signed photographs — and a bell that rings when the Senate calls a vote so members can run back.</p>
+    <p>The Senate's own restaurant since 1960, a block from Russell. Walls papered in signed photographs, and a bell that rings when the Senate calls a vote so members can run back.</p>
+    <div class="rmeta"><span><b>American</b></span> <span>$$$</span> <span>4.3&#9733;</span> <span>Capitol Hill</span></div>
+    <div class="rlinks"><a class="rl book" href="https://www.opentable.com/the-monocle" target="_blank" rel="noopener">Reserve</a><a class="rl " href="https://www.google.com/maps/search/?api=1&query=The+Monocle%2C+107+D+St+NE%2C+Washington+DC" target="_blank" rel="noopener">Map</a><a class="rl " href="tel:+12025464488" target="_blank" rel="noopener">Call</a></div>
     <details><summary>Two alternatives</summary>
       <div class="dbody">
         <p><b>Rasika</b>, Penn Quarter — the best food of the four nights by a distance.</p>
@@ -1018,11 +1032,23 @@
     <div><h3><svg class="ico" aria-hidden="true"><use href="#i-fork"/></svg>Mitsitam Native Foods Cafe</h3>
       <p class="hook">Inside the Museum of the American Indian, five minutes' walk. Bison, frybread, cedar-planked salmon across four regional stations. Best food on the Mall. Shuts at 16:00.</p></div></div>
 
-  <div class="slot rest"><div class="clock">15:45<small>to 17:45</small></div>
+  <div class="slot rest"><div class="clock">15:45<small>to 16:45</small></div>
     <div><h3><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg>Hotel. Rest, shower, air conditioning.</h3>
-      <p class="hook">Non-negotiable on a 97-degree day. This block is the difference between the night walk feeling like a treat and feeling like a fourth wind.</p></div></div>
+      <p class="hook">Required, not optional — Wednesday proved it. An hour flat out before the evening.</p></div></div>
 
-  <div class="slot"><div class="clock">18:00<small>to 20:15</small></div>
+  <div class="slot"><div class="clock">17:00<small>to 18:15</small></div>
+    <div><h3><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg>Planet Word</h3>
+      <p class="hook">Rescheduled from Wednesday. <b>Eight minutes' walk from the hotel</b>, air-conditioned, and open till 18:00 — so this is the last clean slot it fits in.</p>
+      <div class="pins"><span class="pin v">Violet</span><span class="pin go">Free &middot; $15 suggested</span><span class="pin hot">Check closing time before you walk over</span></div>
+      <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=Planet+Word+Museum%2C+925+13th+St+NW%2C+Washington+DC" target="_blank" rel="noopener">Planet Word</a>
+      <details><summary>What's in there, and the fallback if the hours don't work</summary>
+        <div class="dbody">
+          <p>A 22-foot talking word wall that answers when you speak to it, a room where you deliver a famous speech off a teleprompter, karaoke, and a library where the books respond when opened. Restored 1869 school building, rarely crowded.</p>
+          <p><b>If it closes at 17:00 rather than 18:00</b> — hours vary by day — move it to <b>Sunday</b>: it opens at 10, and you could swap it for Union Market before the airport. Confirm on their site the night before.</p>
+        </div></details>
+    </div></div>
+
+  <div class="slot"><div class="clock">18:30<small>to 20:15</small></div>
     <div><h3><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg>The Wharf</h3>
       <p class="hook">Piers, swings, sunset on the Washington Channel, rooftop drinks for the adults. Then dinner on the water.</p></div></div>
 
@@ -1058,7 +1084,9 @@
 
   <div class="eat"><span class="lbl"><svg class="ico" aria-hidden="true"><use href="#i-fork"/></svg>Dinner &middot; 18:45 &middot; The Wharf</span>
     <h3>Moon Rabbit</h3>
-    <p>Modern Vietnamese, acclaimed, on the water, ten minutes from the Tidal Basin when the light goes.</p>
+    <p>On the water, ten minutes from the Tidal Basin when the light goes.</p>
+    <div class="rmeta"><span><b>Vietnamese</b></span> <span>$$$</span> <span>4.5&#9733;</span> <span>The Wharf</span></div>
+    <div class="rlinks"><a class="rl book" href="https://resy.com/cities/washington-dc/venues/moon-rabbit" target="_blank" rel="noopener">Reserve</a><a class="rl " href="https://www.google.com/maps/search/?api=1&query=Moon+Rabbit%2C+801+Wharf+St+SW%2C+Washington+DC" target="_blank" rel="noopener">Map</a><a class="rl " href="https://resy.com/cities/washington-dc/venues/officina" target="_blank" rel="noopener">Officina instead</a></div>
     <details><summary>Two alternatives</summary>
       <div class="dbody">
         <p><b>Officina</b>'s fourth-floor rooftop — less serious food, considerably better view.</p>
@@ -1125,7 +1153,7 @@
 
   <div class="hop"><div class="clock">13:25</div><div class="mv"><svg class="ico" aria-hidden="true"><use href="#i-train"/></svg>Wharf to the Spy Museum &middot; 12 min walk or a 5 min Uber</div></div>
 
-  <div class="slot"><div class="clock">14:00<small>to 17:00</small></div>
+  <div class="slot"><div class="clock">14:00<small>to 16:30</small></div>
     <div><h3><svg class="ico" aria-hidden="true"><use href="#i-eye"/></svg>International Spy Museum</h3>
       <p class="hook">A cover identity at the door, tested as you go. Real tradecraft, a working Enigma, and the best-paced exhibit narrative in the city.</p>
       <div class="pins"><span class="pin r">Ryan</span><span class="pin v">Violet</span><span class="pin hot">Book 14:00, not 13:30</span><span class="pin">$25&ndash;36, rising daily</span></div>
@@ -1134,7 +1162,13 @@
         <div class="dbody"><p>The earlier plan had you here at 13:30 by car. The water taxi lands at 13:20 and you still have to cross to L'Enfant, so <b>book 14:00</b>. It also gives you a buffer if the boat runs late, which boats do.</p></div></details>
     </div></div>
 
-  <div class="slot"><div class="clock">17:30<small>to 19:00</small></div>
+  <div class="slot rest"><div class="clock">16:50<small>to 17:50</small></div>
+    <div><h3><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg>Hotel break</h3>
+      <p class="hook">Campus tour, a boat and three hours of tradecraft is a full day before the evening starts. Go back, cool down, change.</p>
+      <div class="pins"><span class="pin hot">Ask Spyher for an 18:30 start, not 17:30</span></div>
+    </div></div>
+
+  <div class="slot"><div class="clock">18:30<small>to 20:00</small></div>
     <div><h3><svg class="ico" aria-hidden="true"><use href="#i-eye"/></svg>Embassy Row, with a former CIA officer</h3>
       <p class="hook">Ninety minutes up Massachusetts Avenue with someone who worked the trade. Dead drops, surveillance detection routes, the actual buildings where actual things happened.</p>
       <div class="pins"><span class="pin r">Ryan</span><span class="pin v">Violet</span><span class="pin hot">Price on request — phone them</span></div>
@@ -1142,9 +1176,11 @@
         <div class="dbody"><p><b>Kennedy Center rooftop terrace.</b> Free, open to anyone, and the best sunset view in Washington — Potomac, Georgetown, the Lincoln and the Monument in one sweep. Usually a free 18:00 performance on the Millennium Stage downstairs.</p></div></details>
     </div></div>
 
-  <div class="eat"><span class="lbl"><svg class="ico" aria-hidden="true"><use href="#i-fork"/></svg>Dinner &middot; 19:30</span>
+  <div class="eat"><span class="lbl"><svg class="ico" aria-hidden="true"><use href="#i-fork"/></svg>Dinner &middot; 20:30</span>
     <h3>Cafe Riggs</h3>
-    <p>Dinner in an 1891 bank hall, with <b>Silver Lyan</b> — a cocktail bar inside the actual vault — downstairs. A better room and better food than the obvious choice, and a good story to fly home with.</p>
+    <p>Dinner in an 1891 bank hall, with <b>Silver Lyan</b> — a cocktail bar inside the actual vault — downstairs. Four minutes from the hotel.</p>
+    <div class="rmeta"><span><b>American brasserie</b></span> <span>$$$</span> <span>4.4&#9733;</span> <span>Penn Quarter</span></div>
+    <div class="rlinks"><a class="rl book" href="https://resy.com/cities/washington-dc/venues/cafe-riggs" target="_blank" rel="noopener">Reserve</a><a class="rl " href="https://www.google.com/maps/search/?api=1&query=Cafe+Riggs%2C+900+F+St+NW%2C+Washington+DC" target="_blank" rel="noopener">Map</a><a class="rl " href="https://www.opentable.com/old-ebbitt-grill" target="_blank" rel="noopener">Old Ebbitt instead</a></div>
     <details><summary>The classic, and two others</summary>
       <div class="dbody">
         <p><b>Old Ebbitt Grill</b> — 1856, the oldest saloon in Washington. Mahogany, gas lamps, velvet booths, serves past eleven.</p>
@@ -1321,7 +1357,7 @@
     <div class="dbody">
       <p><b>American History</b> — ruby slippers, Julia Child's kitchen, the Greensboro lunch counter, the Star-Spangled Banner in its own dark chamber. Ninety good minutes, no ticket.</p>
       <p><b>Hirshhorn</b> — a concrete doughnut of contemporary art, the most photogenic Smithsonian interior after the Kogod Courtyard. An hour is plenty.</p>
-      <p><b>Natural History</b> — the Hope Diamond and the Fossil Hall genuinely are world-class. But it's the most crowded building on the Mall in August and pitched young. The Butterfly Pavilion costs $6, needs its own ticket, and is <b>closed Saturdays</b>.</p>
+      <p><b>Natural History</b> <span class="stamp">Done Wednesday</span> — and it delivered. Gems, meteorites, human origins, mammals, the African hall. Cruising the whole building beat curating a shortlist.</p>
     </div></details>
 </section>
 
