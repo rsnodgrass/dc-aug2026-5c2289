@@ -108,12 +108,12 @@
   nav a:hover{color:var(--ink);border-bottom-color:var(--red)}
 
   /* ---- sections ---- */
-  section{padding-top:58px}
+  section{padding-top:0}
   .shead{display:flex;align-items:center;gap:12px;flex-wrap:wrap;border-bottom:3px double var(--rule);
     padding-bottom:11px}
   .shead h2{font-size:clamp(27px,5vw,40px);display:flex;align-items:center;gap:12px}
   .shead .kicker{margin-left:auto}
-  .lede{color:var(--soft);font-size:15.5px;max-width:62ch;margin:16px 0 0}
+  .lede{color:var(--soft);font-size:15.5px;max-width:62ch;margin:0 0 14px}
 
   /* ---- details ---- */
   details{border-bottom:1px solid var(--hair)}
@@ -133,7 +133,7 @@
   .dbody li::before{content:"\2605";position:absolute;left:-2px;color:var(--gold);font-size:9px;top:.35em}
 
   /* ---- day ---- */
-  .day{padding-top:62px}
+  .day{padding-top:52px}
   .dayhead{border-top:3px double var(--rule);padding-top:16px}
   .day .kicker{display:flex;align-items:center;gap:7px}
   .d1 .kicker,.d2 .kicker{color:var(--red)} .d3 .kicker{color:var(--blue)} .d4 .kicker{color:var(--gold)} .d5 .kicker{color:var(--blue)}
@@ -298,15 +298,23 @@
   .todaypill{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;
     background:var(--red);color:var(--parch);border-radius:100px;padding:3px 9px;margin-left:9px;
     display:inline-block;vertical-align:3px}
-  .refbox{border-top:3px double var(--rule);margin-top:34px}
-  .refbox>summary{list-style:none;cursor:pointer;padding:16px 0;display:flex;align-items:center;gap:12px;
-    font-family:var(--display);font-size:clamp(22px,4vw,30px);color:var(--ink)}
+  .refbox{border-top:1px solid var(--rule);margin:0}
+  .refbox>summary{list-style:none;cursor:pointer;padding:14px 0 14px 26px;display:flex;
+    align-items:baseline;gap:12px;position:relative;
+    font-family:var(--display);font-size:clamp(19px,3.2vw,24px);color:var(--ink);line-height:1.25}
   .refbox>summary::-webkit-details-marker{display:none}
-  .refbox>summary::before{content:"+";font-family:var(--mono);font-size:20px;color:var(--red);
-    width:18px;flex:none;font-weight:700}
+  .refbox>summary::before{content:"+";position:absolute;left:0;top:15px;font-family:var(--mono);
+    font-size:16px;color:var(--red);font-weight:700;line-height:1}
   .refbox[open]>summary::before{content:"\2212"}
-  .refbox>summary small{font-family:var(--mono);font-size:10px;letter-spacing:.14em;
-    text-transform:uppercase;color:var(--faint);margin-left:auto;font-weight:400}
+  .refbox>summary:hover{background:var(--panel)}
+  .refbox>summary small{font-family:var(--mono);font-size:9.5px;letter-spacing:.13em;
+    text-transform:uppercase;color:var(--faint);margin-left:auto;font-weight:400;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:48%}
+  .refbox[open]{padding-bottom:30px;background:linear-gradient(var(--panel),var(--panel)) no-repeat left/3px 100%}
+  .refbox[open]>summary{border-bottom:1px solid var(--hair);margin-bottom:18px}
+  .reftop{border-top:3px double var(--rule);margin-top:52px;padding-top:6px}
+  .reftop-label{font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--faint);padding:14px 0 4px;display:block}
   .wear{border:1px solid var(--red);border-left-width:4px;border-radius:2px;background:var(--panel);
     padding:13px 15px;margin:16px 0 4px;display:flex;gap:12px;align-items:flex-start}
   .wear .ico{color:var(--red);width:19px;height:19px;margin-top:2px}
@@ -442,7 +450,7 @@
   </ul>
 </nav>
 
-<section id="citymapwrap" style="padding-top:44px">
+<section id="citymapwrap" style="padding-top:30px">
   <details class="refbox" open><summary>The map<small>All stops, to scale</small></summary>
 
   <figure id="citymap">
@@ -552,6 +560,7 @@
   </details>
 </section>
 
+<div class="reftop"><span class="reftop-label">Reference &middot; tap to open</span></div>
 <section id="base">
   <div class="shead"><h2><svg class="ico" aria-hidden="true"><use href="#i-bag"/></svg>Base</h2>
     <span class="kicker">Grand Hyatt Washington</span></div>
